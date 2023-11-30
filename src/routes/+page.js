@@ -1,14 +1,14 @@
-import { getPosts } from "$lib/utils/sanity";
-import { error } from "@sveltejs/kit";
+import { getFrontPage } from '$lib/utils/sanity';
+import { error } from '@sveltejs/kit';
 
 export const load = async () => {
-  const posts = await getPosts();
+	const frontPage = await getFrontPage();
 
-  if (posts) {
-    return {
-      posts,
-    };
-  }
+	if (frontPage) {
+		return {
+			frontPage
+		};
+	}
 
-  throw error(404, "Not found");
+	throw error(404, 'Not found');
 };

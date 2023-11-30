@@ -1,0 +1,41 @@
+@layer base {
+	
+	body {
+		font-family: 'Work Sans', sans-serif;
+		font-weight: 300;
+	
+		@apply text-dark text-body selection:bg-primary selection:text-white;
+	
+	}
+
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5 {
+		font-family: 'Merriweather Sans Variable', sans-serif;
+		font-weight: 700;
+		font-variation-settings: "wght" 700;
+	}
+	
+	.link-underline {
+		@apply relative after:block after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-blue after:transform after:transition-all after:duration-300 after:ease-quint-out hover:after:w-0 hover:after:left-full;
+	}
+	
+	.link-underline-inverted {
+		@apply relative after:block after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-blue after:transform after:transition-all after:duration-300 after:ease-quint-out hover:after:w-full;
+	}
+}
+
+@layer components {
+  .radial-gradient-primary {
+    background-image: radial-gradient(ellipse at top left, #FFA929, transparent), radial-gradient(ellipse at bottom right, #FFD28F, #FFA929);
+  }
+  .radial-gradient-secondary {
+    background-image: radial-gradient(ellipse at top left, #124697, transparent), radial-gradient(ellipse at bottom right, #1961D2, #1961D2);
+  }
+
+	.arrow-after {
+		@apply relative flex items-center gap-2 after:content-arrow-right hover:after:translate-x-2 after:transition-transform duration-300 ease-quint-out;
+	}
+}
