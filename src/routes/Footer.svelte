@@ -6,7 +6,6 @@
 	import PhoneIcon from '$lib/assets/PhoneIcon.svelte';
 	import Svg from '$lib/components/Svg.svelte';
 	export let logo, contactInformation, footer;
-	console.log('footer', footer);
 	$: ({ openingHours, email, phone, whatsapp, instagram, facebook } = contactInformation);
 	$: ({ aboutUs, places, services } = footer);
 </script>

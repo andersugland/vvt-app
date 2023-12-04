@@ -1,6 +1,7 @@
 <script>
 	import Hero from '$lib/components/Hero.svelte';
-	// import Teaser from '$lib/components/Teaser.svelte';
+	import Teaser from '$lib/components/Teaser.svelte';
+	import Services from '$lib/components/Services.svelte';
 	// import InfoSection from '$lib/components/InfoSection.svelte';
 	// import ProjectShowcase from '$lib/components/ProjectShowcase.svelte';
 	// import Accordion from '$lib/components/Accordion.svelte';
@@ -10,10 +11,9 @@
 	// import Quote from './Quote.svelte';
 
 	export let blocks;
-	console.log('blocks1', blocks);
 </script>
 
-<div class="flex flex-col gap-12">
+<div>
 	{#each blocks as block}
 		{#key block}
 			{#if block['_type'] === 'hero'}
@@ -22,26 +22,27 @@
 			{#if block['_type'] === 'teaser'}
 				<Teaser data={block} />
 			{/if}
-			{#if block['_type'] === 'infoSection'}
-				<InfoSection data={block} />
+			{#if block['_type'] === 'servicesBlock'}
+				<!-- <InfoSection data={block} /> -->
+				<Services data={block} />
 			{/if}
 			{#if block['_type'] === 'projectShowcase'}
-				<ProjectShowcase data={block} />
+				<!-- <ProjectShowcase data={block} /> -->
 			{/if}
 			{#if block['_type'] === 'accordion'}
-				<Accordion data={block} />
+				<!-- <Accordion data={block} /> -->
 			{/if}
 			{#if block['_type'] === 'media'}
-				<Media data={block} />
+				<!-- <Media data={block} /> -->
 			{/if}
 			{#if block['_type'] === 'aboutGrid'}
-				<AboutGrid data={block} />
+				<!-- <AboutGrid data={block} /> -->
 			{/if}
 			{#if block['_type'] == 'blockContent'}
-				<Content data={block} />
+				<!-- <Content data={block} /> -->
 			{/if}
 			{#if block['_type'] == 'quote'}
-				<Quote data={block} />
+				<!-- <Quote data={block} /> -->
 			{/if}
 		{/key}
 	{/each}

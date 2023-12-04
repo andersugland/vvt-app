@@ -7,9 +7,9 @@
 	let sizeClass;
 
 	if (size === 'regular') {
-		sizeClass = 'py-4 px-8';
+		sizeClass = 'py-[10px] px-8';
 	} else if (size === 'large') {
-		sizeClass = 'py-4 px-8 text-md';
+		sizeClass = 'py-[10px] px-8 text-body';
 	} else {
 		sizeClass = 'py-3 px-6';
 	}
@@ -19,7 +19,7 @@
 	href={link}
 	class="{sizeClass} {variant === 'secondary'
 		? 'radial-gradient-secondary'
-		: 'radial-gradient-primary'} relative text-white rounded-[5px] font-heading font-semibold grid place-items-center max-w-max cursor-pointer transition-all duration-300 ease-quint-out hover:bg-blue"
+		: 'radial-gradient-primary'} relative text-white rounded-[5px] font-heading font-semibold text-sm grid place-items-center max-w-max cursor-pointer transition-all duration-300 ease-quint-out hover:bg-blue"
 >
 	{title}
 </a>

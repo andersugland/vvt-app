@@ -5,10 +5,9 @@
 	import Button from '$lib/components/Button.svelte';
 
 	export let logo, mainMenu, navCTA;
-	console.log('header', mainMenu);
 </script>
 
-<header class="fixed top-0 w-full flex justify-between bg-white">
+<header class="fixed z-50 top-0 w-full flex justify-between bg-white">
 	<div class="container px-2 md:px-4 flex justify-between items-center py-6">
 		<a href="/">
 			<Svg image={logo} loading={'eager'} />

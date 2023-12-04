@@ -156,7 +156,44 @@ export async function getFrontPage() {
 							}
 						)
 					}
-				}
+				},
+				_type == 'teaser' => {
+					variant,
+					title,
+					lead,
+					cta,
+					images
+				},
+				_type == 'servicesBlock' => {
+					Services[] {
+						title,
+						featuredImage,
+						icon,
+						link-> {
+							type,
+							slug,
+						}
+					},
+					sertificates {
+						title,
+						sertificates,
+						'cta': cta {
+							title,
+							'link': select(
+								url.variant == 'internal' => url.internal->{
+									'url': select(
+										_type == 'service' => '/tjenester/',
+										_type == 'project' => '/prosjekter/',
+										'/'
+									) + slug.current,
+								},
+								url.variant == 'external' => url{
+									'url': external
+								}
+							)
+						}
+					}
+				},	
 			}
 		}`
 	);
@@ -200,7 +237,44 @@ export async function getPage(slug) {
 								}
 							)
 						}
-					}
+					},
+					_type == 'teaser' => {
+						variant,
+						title,
+						lead,
+						cta,
+						images
+					},
+					_type == 'servicesBlock' => {
+						Services[] {
+							title,
+							featuredImage,
+							icon,
+							link-> {
+								type,
+								slug,
+							}
+						},
+						sertificates {
+							title,
+							sertificates,
+							'cta': cta {
+								title,
+								'link': select(
+									url.variant == 'internal' => url.internal->{
+										'url': select(
+											_type == 'service' => '/tjenester/',
+											_type == 'project' => '/prosjekter/',
+											'/'
+										) + slug.current,
+									},
+									url.variant == 'external' => url{
+										'url': external
+									}
+								)
+							}
+						}
+					},
 				}
 			}
 		}`,

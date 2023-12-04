@@ -30,13 +30,13 @@ export default {
 				dance: 'dance 20s linear infinite'
 			},
 			fontFamily: {
-				heading: ['Merriweather Sans Variable', 'sans-serif'],
-				body: ['Work Sans', 'sans-serif']
+				heading: ['Ubuntu', 'sans-serif'],
+				body: ['Rubik Variable', 'sans-serif']
 			},
 			fontSize: {
-				sm: ['15px', '18px'],
-				body: ['20px', '23px'],
-				md: ['26.66px', '31px'],
+				sm: ['15px', '1.8em'],
+				body: ['20px', '1.8em'],
+				md: ['26.66px', '1.8em'],
 				lg: ['35.54px', '110%'],
 				xl: ['47.37px', '110%'],
 				'2xl': ['63.15px', '110%'],

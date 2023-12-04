@@ -1,8 +1,9 @@
 @layer base {
 	
 	body {
-		font-family: 'Work Sans', sans-serif;
+		font-family: 'Rubik Variable', sans-serif;
 		font-weight: 300;
+    font-variation-settings: "wght" 300;
 	
 		@apply text-dark text-body selection:bg-primary selection:text-white;
 	
@@ -13,9 +14,8 @@
 	h3, .h3,
 	h4, .h4,
 	h5, .h5 {
-		font-family: 'Merriweather Sans Variable', sans-serif;
+		font-family: 'Ubuntu', sans-serif;
 		font-weight: 700;
-		font-variation-settings: "wght" 700;
 	}
 	
 	.link-underline {
