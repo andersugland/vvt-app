@@ -19,7 +19,11 @@
 			<div class="lg:col-start-7 lg:col-end-13 grid grid-cols-6 gap-5 -mt-8 lg:-mt-12">
 				{#if portraitOne}
 					<div class="relative col-start-2 col-span-2 row-start-1 row-span-3 aspect-[9/14]">
-						<div class="absolute w-full h-full rounded-lg border-[3px] border-white">
+						<div
+							class="absolute w-full h-full rounded-lg border-[3px] {variant === 'transparent'
+								? 'border-secondary'
+								: 'border-white'}"
+						>
 							<Image
 								image={portraitOne.image}
 								maxWidth={250}
@@ -31,7 +35,11 @@
 				{/if}
 				{#if portraitTwo}
 					<div class="relative col-start-4 col-span-2 row-start-2 row-span-3 w-fullaspect-[9/14]">
-						<div class="absolute ml-8 w-full h-full rounded-lg border-[3px] border-white">
+						<div
+							class="absolute ml-8 w-full h-full rounded-lg border-[3px] {variant === 'transparent'
+								? 'border-primary'
+								: 'border-white'}"
+						>
 							<Image
 								image={portraitTwo.image}
 								maxWidth={250}
@@ -43,7 +51,11 @@
 				{/if}
 				{#if landscapeOne}
 					<div class="relative col-start-1 col-span-3 row-start-4 row-span-2 w-full aspect-[16/9]">
-						<div class="absolute w-full h-full border-[3px] border-white rounded-lg">
+						<div
+							class="absolute w-full h-full border-[3px] {variant === 'transparent'
+								? 'border-primary'
+								: 'border-white'} rounded-lg"
+						>
 							<Image
 								image={landscapeOne.image}
 								maxWidth={450}
@@ -55,7 +67,11 @@
 				{/if}
 				{#if landscapeTwo}
 					<div class="relative col-start-4 col-span-3 row-start-5 row-span-2 w-full aspect-[16/9]">
-						<div class="absolute ml-8 w-full h-full border-[3px] border-white rounded-lg">
+						<div
+							class="absolute ml-8 w-full h-full border-[3px] {variant === 'transparent'
+								? 'border-secondary'
+								: 'border-white'} rounded-lg"
+						>
 							<Image
 								image={landscapeTwo.image}
 								maxWidth={450}

@@ -40,7 +40,7 @@
 			{/each}
 			{#if sertificates}
 				<li
-					class="w-full h-full md:col-span-2 radial-gradient-primary rounded-lg text-white flex flex-col-reverse md:flex-row gap-16 justify-between md:items-center py-16 px-12"
+					class="w-full h-full md:col-span-2 radial-gradient-primary rounded-lg text-white flex flex-col-reverse md:flex-row gap-16 justify-between md:items-center lg:justify-normal py-16 px-12"
 				>
 					<div class="h-full flex flex-col gap-8 lg:gap-16 justify-center">
 						{#if sertificates?.title}
