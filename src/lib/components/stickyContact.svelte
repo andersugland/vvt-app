@@ -6,7 +6,7 @@
 	export let contactInformation;
 </script>
 
-<div class="fixed top-1/3 right-2">
+<div class="fixed z-40 top-1/3 right-2">
 	<ul class="grid gap-2">
 		{#if contactInformation?.email}
 			<li>

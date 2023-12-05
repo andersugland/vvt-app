@@ -193,7 +193,20 @@ export async function getFrontPage() {
 							)
 						}
 					}
-				},	
+				},
+				_type == 'partners' => {
+					title,
+					partners[] {
+						logo
+					},
+				},
+				_type == 'sertificates' => {
+					title,
+					image,
+					sertificates[] {
+						logo
+					}
+				},
 			}
 		}`
 	);
@@ -206,6 +219,9 @@ export async function getFooter() {
 				aboutUs[]->,
 				services[]->,
 				places[]->,
+				logos[] {
+					logo
+				},
 			}
 		}`
 	);
@@ -273,6 +289,19 @@ export async function getPage(slug) {
 									}
 								)
 							}
+						}
+					},
+					_type == 'partners' => {
+						title,
+						partners[] {
+							logo
+						},
+					},
+					_type == 'sertificates' => {
+						title,
+						image,
+						sertificates[] {
+							logo
 						}
 					},
 				}

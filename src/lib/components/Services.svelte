@@ -14,7 +14,7 @@
 				<li class="group w-full h-full rounded-lg">
 					<a href={`/services/${service?.link?.slug.current}`} class="grid">
 						<div
-							class="relative z-0 row-start-1 row-end-1 col-start-1 col-end-1 after:block after:w-full after:h-full after:absolute after:top-0 after:left-0 after:backdrop-blur-[3px] after:transition-all after:duration-100 after:ease-in-out group-hover:after:backdrop-blur-0 after:rounded-lg"
+							class="relative z-0 row-start-1 row-end-1 col-start-1 col-end-1 after:block after:w-full after:h-full after:absolute after:top-0 after:left-0 after:backdrop-blur-[3px] after:transition-all after:duration-100 after:ease-in-out after:rounded-lg group-hover:after:backdrop-blur-0"
 						>
 							<Image
 								image={service?.featuredImage.image}
@@ -27,7 +27,7 @@
 							class="relative z-10 row-start-1 row-end-1 col-start-1 col-end-1 w-full h-full flex flex-col justify-center items-center gap-5"
 						>
 							{#if service?.icon}
-								<Svg image={service?.icon} loading={'eager'} styling="w-full h-full" />
+								<Svg image={service?.icon} loading={'eager'} styling="w-12 h-12" />
 							{/if}
 							{#if service?.title}
 								<h3 class="text-white text-">

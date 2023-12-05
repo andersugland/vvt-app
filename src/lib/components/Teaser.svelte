@@ -13,7 +13,7 @@
 	};
 </script>
 
-<section class={variants[variant]}>
+<section class="{variants[variant]} mt-12">
 	<div class="container px-2 md:px-4 grid lg:grid-cols-12 gap-5 pb-medium">
 		{#if images}
 			<div class="lg:col-start-7 lg:col-end-13 grid grid-cols-6 gap-5 -mt-8 lg:-mt-12">

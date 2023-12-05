@@ -7,4 +7,3 @@
 {#if blocks}
 	<Blocks {blocks} />
 {/if}
-<section class="h-full min-h-screen">filler</section>

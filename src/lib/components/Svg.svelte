@@ -2,7 +2,8 @@
 	import { urlFor } from '$lib/utils/image';
 
 	export let image,
-		loading = 'lazy';
+		loading = 'lazy',
+		styling = '';
 
 	let loaded = false;
 
@@ -21,4 +22,5 @@
 	fetchPriority={loading === 'eager' ? 'high' : undefined}
 	width={imageWidth}
 	height={imageHeight}
+	class={styling}
 />
