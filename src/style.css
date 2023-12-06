@@ -38,4 +38,10 @@
 	.arrow-after {
 		@apply relative flex items-center gap-2 after:content-arrow-right hover:after:translate-x-2 after:transition-transform duration-300 ease-quint-out;
 	}
+
+  /* .test {
+    border: 1px solid red;
+    display: grid;
+    grid-template-rows: ;
+  } */
 }

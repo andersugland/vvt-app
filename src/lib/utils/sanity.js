@@ -207,6 +207,28 @@ export async function getFrontPage() {
 						logo
 					}
 				},
+				_type == 'ctaBlock' => {
+					variant,
+					'image': image.image,
+					title,
+					lead,
+					body,
+					'cta': cta[] {
+						title,
+						'link': select(
+							url.variant == 'internal' => url.internal->{
+								'url': select(
+									_type == 'service' => '/tjenester/',
+									_type == 'project' => '/prosjekter/',
+									'/'
+								) + slug.current,
+							},
+							url.variant == 'external' => url{
+								'url': external
+							}
+						)
+					}
+				}
 			}
 		}`
 	);

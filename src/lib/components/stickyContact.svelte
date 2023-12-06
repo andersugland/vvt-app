@@ -2,7 +2,6 @@
 	import WhatsAppIcon from '$lib/assets/WhatsAppIcon.svelte';
 	import MailIcon from '$lib/assets/MailIcon.svelte';
 	import InstagramIcon from '$lib/assets/InstagramIcon.svelte';
-
 	export let contactInformation;
 </script>
 

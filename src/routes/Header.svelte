@@ -1,9 +1,6 @@
 <script>
-	// import Image from '$lib/components/Image.svelte';
-
 	import Svg from '$lib/components/Svg.svelte';
 	import Button from '$lib/components/Button.svelte';
-
 	export let logo, mainMenu, navCTA;
 </script>
 

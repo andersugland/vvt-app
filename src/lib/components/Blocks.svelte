@@ -4,6 +4,7 @@
 	import Services from '$lib/components/Services.svelte';
 	import Partners from '$lib/components/Partners.svelte';
 	import Sertificates from '$lib/components/Sertificates.svelte';
+	import Cta from '$lib/components/CTA.svelte';
 	// import InfoSection from '$lib/components/InfoSection.svelte';
 	// import ProjectShowcase from '$lib/components/ProjectShowcase.svelte';
 	// import Accordion from '$lib/components/Accordion.svelte';
@@ -33,8 +34,8 @@
 			{#if block['_type'] === 'sertificates'}
 				<Sertificates data={block} />
 			{/if}
-			{#if block['_type'] === 'media'}
-				<!-- <Media data={block} /> -->
+			{#if block['_type'] === 'ctaBlock'}
+				<Cta data={block} />
 			{/if}
 			{#if block['_type'] === 'aboutGrid'}
 				<!-- <AboutGrid data={block} /> -->

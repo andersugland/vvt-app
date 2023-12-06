@@ -3,7 +3,6 @@
 	import Image from '$lib/components/Image.svelte';
 	export let data;
 	$: ({ title, image, sertificates } = data);
-	console.log('sertificates', data);
 </script>
 
 <section class="radial-gradient-secondary text-white mt-24">

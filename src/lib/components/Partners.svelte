@@ -2,7 +2,6 @@
 	import Svg from '$lib/components/Svg.svelte';
 	export let data;
 	$: ({ title, partners } = data);
-	console.log('partners', data);
 </script>
 
 <section class="container px-2 md:px-4 pt-small">

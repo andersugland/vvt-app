@@ -3,7 +3,6 @@
 	import Svg from '$lib/components/Svg.svelte';
 	import Button from '$lib/components/Button.svelte';
 	export let data;
-	console.log('services', data);
 	$: ({ Services, sertificates } = data);
 </script>
 

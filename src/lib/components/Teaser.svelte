@@ -4,7 +4,6 @@
 	export let data;
 	$: ({ variant, title, lead, cta, images } = data);
 	$: ({ portraitOne, portraitTwo, landscapeOne, landscapeTwo } = data.images);
-	console.log('teaser', data);
 
 	const variants = {
 		transparent: 'bg-transparent text-dark',

@@ -14,21 +14,24 @@ export default {
 				primary: '#F39200',
 				secondary: '#124697'
 			},
-			keyframes: {
-				dance: {
-					'0%, 100%': {
-						opacity: '1',
-						transform: 'rotate(0deg) scale(1) translate(0, 0)'
-					},
-					'50%': {
-						opacity: '.85',
-						transform: 'rotate(180deg) scale(1.5) translate(20px, 20px)'
-					}
-				}
-			},
-			animation: {
-				'spin-slow': 'spin 15s linear infinite',
-				dance: 'dance 20s linear infinite'
+			// keyframes: {
+			// 	dance: {
+			// 		'0%, 100%': {
+			// 			opacity: '1',
+			// 			transform: 'rotate(0deg) scale(1) translate(0, 0)'
+			// 		},
+			// 		'50%': {
+			// 			opacity: '.85',
+			// 			transform: 'rotate(180deg) scale(1.5) translate(20px, 20px)'
+			// 		}
+			// 	}
+			// },
+			// animation: {
+			// 	'spin-slow': 'spin 15s linear infinite',
+			// 	dance: 'dance 20s linear infinite'
+			// },
+			gridTemplateColumns: {
+				imageOutside: '1fr 1fr 1fr'
 			},
 			fontFamily: {
 				heading: ['Ubuntu', 'sans-serif'],
