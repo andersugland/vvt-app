@@ -228,6 +228,9 @@ export async function getFrontPage() {
 							}
 						)
 					}
+				},
+				_type == 'content' => {
+					content
 				}
 			}
 		}`

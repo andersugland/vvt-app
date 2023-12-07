@@ -3,7 +3,6 @@
 	import Button from '$lib/components/Button.svelte';
 	export let data;
 	$: ({ variant, image, title, lead, body, cta } = data);
-	console.log('CTA', data);
 
 	const variants = {
 		sideImage: 'bg-transparent text-dark',
