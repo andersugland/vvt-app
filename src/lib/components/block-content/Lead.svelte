@@ -4,7 +4,7 @@
 	// $: ({ value } = portableText);
 </script>
 
-<span>
+<span class="lead">
 	<slot />
 </span>
 

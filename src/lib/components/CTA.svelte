@@ -103,7 +103,7 @@
 		</div>
 	{/if}
 	{#if variant === 'primary' || variant === 'secondary'}
-		<div class="{variants[variant]} container px-2 md:px-4 py-small">
+		<div class="container px-2 md:px-4 py-small">
 			<div class="relative z-0 grid gap-5 max-w-[750px]">
 				{#if title}
 					<h2 class="text-2xl">{title}</h2>
