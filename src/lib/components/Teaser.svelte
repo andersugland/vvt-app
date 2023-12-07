@@ -7,7 +7,7 @@
 
 	const variants = {
 		transparent: 'bg-transparent text-dark',
-		primary: 'radial-gradient-primary text-white',
+		primary: 'radial-gradient-primary text-white selection:bg-secondary',
 		secondary: 'radial-gradient-secondary text-white'
 	};
 </script>
