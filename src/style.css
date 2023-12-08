@@ -1,5 +1,9 @@
 @layer base {
-	
+
+	html {
+		@apply text-[18px] md:text-[20px];
+	}
+
 	body {
 		font-family: 'Rubik Variable', sans-serif;
 		font-weight: 300;
