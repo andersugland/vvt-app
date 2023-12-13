@@ -8,6 +8,7 @@
 	export let logo, contactInformation, footer;
 	$: ({ openingHours, email, phoneNumber, whatsapp, instagram, facebook } = contactInformation);
 	$: ({ aboutUs, places, services, logos } = footer);
+	console.log('footer', footer.services);
 </script>
 
 <footer class="grid gap-8 py-2 text-secondary pt-small md:pt-medium">

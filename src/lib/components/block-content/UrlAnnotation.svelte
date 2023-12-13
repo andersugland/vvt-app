@@ -6,7 +6,7 @@
 </script>
 
 {#if value.href}
-	<a href={value.href} target={newWindow ? '_blank' : undefined} class="text-blue-500">
+	<a href={value.href} target={newWindow ? '_blank' : undefined} class="link-underline--secondary">
 		<slot />
 	</a>
 {:else}

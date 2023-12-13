@@ -9,7 +9,7 @@
 	if (size === 'regular') {
 		sizeClass = 'py-[10px] px-8';
 	} else if (size === 'large') {
-		sizeClass = 'py-[10px] px-8 text-body';
+		sizeClass = 'py-[10px] px-8 text-xl';
 	} else {
 		sizeClass = 'py-3 px-6';
 	}

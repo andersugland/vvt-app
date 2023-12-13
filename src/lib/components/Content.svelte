@@ -5,7 +5,7 @@
 	$: ({ content } = data);
 </script>
 
-<section class="container px-2 md:px-4 grid md:grid-cols-12 md:gap-5 py-small">
+<section class="overlap container px-2 md:px-4 grid md:grid-cols-12 md:gap-5 py-small">
 	<div class="content md:col-start-2 md:col-end-9">
 		<BlockContent {content} />
 	</div>
@@ -35,10 +35,6 @@
 
 	:global(.content h5:not(:first-child)) {
 		@apply mt-4 mb-4;
-	}
-
-	:global(.content a) {
-		@apply underline hover:no-underline text-inherit text-secondary;
 	}
 
 	:global(.content ul li) {

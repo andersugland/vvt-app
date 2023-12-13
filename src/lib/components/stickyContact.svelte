@@ -5,13 +5,13 @@
 	export let contactInformation;
 </script>
 
-<div class="fixed z-40 top-1/3 right-2">
+<div class="fixed z-40 top-1/3 right-2 hidden md:block">
 	<ul class="grid gap-2">
 		{#if contactInformation?.email}
 			<li>
 				<a
 					href={contactInformation?.email}
-					class="block bg-white text-secondary hover:text-primary p-4 lg:p-6 rounded-md shadow-md"
+					class="block bg-white text-secondary hover:text-primary p-2 lg:p-4 rounded-md shadow-md"
 				>
 					<MailIcon />
 				</a>
@@ -21,7 +21,7 @@
 			<li>
 				<a
 					href={contactInformation?.whatsapp}
-					class="block bg-white text-secondary hover:text-primary p-4 lg:p-6 rounded-md shadow-md"
+					class="block bg-white text-secondary hover:text-primary p-2 lg:p-4 rounded-md shadow-md"
 				>
 					<WhatsAppIcon />
 				</a>
@@ -31,7 +31,7 @@
 			<li>
 				<a
 					href={contactInformation?.instagram}
-					class="block bg-white text-secondary hover:text-primary p-4 lg:p-6 rounded-md shadow-md"
+					class="block bg-white text-secondary hover:text-primary p-2 lg:p-4 rounded-md shadow-md"
 				>
 					<InstagramIcon />
 				</a>

@@ -254,7 +254,7 @@ export async function getFooter() {
 
 export async function getPage(slug) {
 	return await client.fetch(
-		groq`*[_type == "page" && slug.current == $slug][0]{
+		groq`*[(_type == "page" || _type == "service" || _type == 'place') && slug.current == $slug][0]{
 			'page': {
 				title,
 				'blocks': blocks.blocks[]{
