@@ -231,6 +231,35 @@ export async function getFrontPage() {
 				},
 				_type == 'content' => {
 					content
+				},
+				_type == 'cardGrid' => {
+					showSertificates,
+					cards[] -> {
+						_type,
+						slug,
+						title,
+						'image': featuredImage.image,
+						icon,
+					},
+					sertificates {
+							title,
+							sertificates,
+							'cta': cta {
+								title,
+								'link': select(
+									url.variant == 'internal' => url.internal->{
+										'url': select(
+											_type == 'service' => '/tjenester/',
+											_type == 'project' => '/prosjekter/',
+											'/'
+										) + slug.current,
+									},
+									url.variant == 'external' => url{
+										'url': external
+									}
+								)
+							}
+						}
 				}
 			}
 		}`
@@ -329,6 +358,60 @@ export async function getPage(slug) {
 							logo
 						}
 					},
+					_type == 'ctaBlock' => {
+						variant,
+						'image': image.image,
+						title,
+						lead,
+						body,
+						'cta': cta[] {
+							title,
+							'link': select(
+								url.variant == 'internal' => url.internal->{
+									'url': select(
+										_type == 'service' => '/tjenester/',
+										_type == 'project' => '/prosjekter/',
+										'/'
+									) + slug.current,
+								},
+								url.variant == 'external' => url{
+									'url': external
+								}
+							)
+						}
+					},
+					_type == 'content' => {
+						content
+					},
+					_type == 'cardGrid' => {
+						showSertificates,
+						cards[] -> {
+							_type,
+							slug,
+							title,
+							'image': featuredImage.image,
+							icon,
+						},
+						sertificates {
+							title,
+							sertificates,
+							'cta': cta {
+								title,
+								'link': select(
+									url.variant == 'internal' => url.internal->{
+										'url': select(
+											_type == 'service' => '/tjenester/',
+											_type == 'project' => '/prosjekter/',
+											'/'
+										) + slug.current,
+									},
+									url.variant == 'external' => url{
+										'url': external
+									}
+								)
+							}
+						}
+					}
 				}
 			}
 		}`,

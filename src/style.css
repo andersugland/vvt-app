@@ -36,7 +36,7 @@
 	.link-underline-inverted--secondary {
 		@apply relative text-secondary after:block after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-secondary after:transform after:transition-all after:duration-300 after:ease-quint-out hover:after:w-full;
 	}
-
+	
 	section + section:not(.overlap) {
 		@apply mt-small md:mt-medium
 	}

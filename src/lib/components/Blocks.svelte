@@ -6,6 +6,7 @@
 	import Sertificates from '$lib/components/Sertificates.svelte';
 	import Cta from '$lib/components/CTA.svelte';
 	import Content from '$lib/components/Content.svelte';
+	import CardGrid from '$lib/components/CardGrid.svelte';
 	// import InfoSection from '$lib/components/InfoSection.svelte';
 	// import ProjectShowcase from '$lib/components/ProjectShowcase.svelte';
 	// import Accordion from '$lib/components/Accordion.svelte';
@@ -41,11 +42,11 @@
 			{#if block['_type'] === 'content'}
 				<Content data={block} />
 			{/if}
-			{#if block['_type'] == 'blockContent'}
-				<!-- <Content data={block} /> -->
+			{#if block['_type'] == 'cardGrid'}
+				<CardGrid data={block} />
 			{/if}
 			{#if block['_type'] == 'quote'}
-				<!-- <Quote data={block} /> -->
+				<!-- <CardGrid data={block} /> -->
 			{/if}
 		{/key}
 	{/each}

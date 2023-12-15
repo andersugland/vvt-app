@@ -3,21 +3,28 @@
 	import Svg from '$lib/components/Svg.svelte';
 	import Button from '$lib/components/Button.svelte';
 	export let data;
-	$: ({ Services, sertificates } = data);
+	$: ({ cards, showSertificates, sertificates } = data);
+	console.log('cardGrid', data);
+
+	const routes = {
+		page: '',
+		service: '/diensten',
+		place: '/steden'
+	};
 </script>
 
 <section class="container px-2 md:px-4">
-	{#if Services || sertificates}
+	{#if cards || showSertificates}
 		<ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-			{#each Services as service}
+			{#each cards as item}
 				<li class="group w-full h-full rounded-lg">
-					<a href={`/services/${service?.link?.slug.current}`} class="grid">
+					<a href={`${routes[item['_type']]}/${item?.slug?.current}`} class="grid">
 						<div
-							class="relative z-0 row-start-1 row-end-1 col-start-1 col-end-1 after:block after:w-full after:h-full after:absolute after:top-0 after:left-0 after:backdrop-blur-[3px] after:transition-all after:duration-100 after:ease-in-out after:rounded-lg group-hover:after:backdrop-blur-0"
+							class="relative z-0 row-start-1 row-end-1 col-start-1 col-end-1 before:block before:w-full before:h-full before:absolute before:top-0 before:left-0 before:bg-black before:rounded-lg before:opacity-30 after:block after:w-full after:h-full after:absolute after:top-0 after:left-0 after:backdrop-blur-[3px] after:transition-all after:duration-100 after:ease-in-out after:rounded-lg group-hover:after:backdrop-blur-0"
 						>
-							{#if service?.featuredImage}
+							{#if item?.image}
 								<Image
-									image={service?.featuredImage.image}
+									image={item?.image}
 									maxWidth={500}
 									maxHeight={500}
 									styling="w-full h-full object-cover rounded-lg"
@@ -27,19 +34,19 @@
 						<div
 							class="relative z-10 row-start-1 row-end-1 col-start-1 col-end-1 w-full h-full flex flex-col justify-center items-center gap-5"
 						>
-							{#if service?.icon}
-								<Svg image={service?.icon} loading={'eager'} styling="w-12 h-12" />
+							{#if item?.icon}
+								<Svg image={item?.icon} loading={'eager'} styling="w-12 h-12" />
 							{/if}
-							{#if service?.title}
+							{#if item?.title}
 								<h3 class="text-white text-">
-									{service?.title}
+									{item?.title}
 								</h3>
 							{/if}
 						</div>
 					</a>
 				</li>
 			{/each}
-			{#if sertificates}
+			{#if showSertificates}
 				<li
 					class="w-full h-full md:col-span-2 radial-gradient-primary rounded-lg text-white flex flex-col-reverse md:flex-row gap-16 justify-between md:items-center lg:justify-normal py-16 px-12"
 				>

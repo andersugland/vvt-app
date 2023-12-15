@@ -3,6 +3,12 @@
 	import Button from '$lib/components/Button.svelte';
 	export let logo, mainMenu, navCTA;
 
+	const routes = {
+		page: '',
+		service: '/diensten',
+		place: '/steden'
+	};
+
 	$: active = false;
 
 	const toggleMainMenu = () => {
@@ -39,7 +45,7 @@
 					{#each mainMenu as item}
 						<li>
 							<a
-								href="/{item?.slug?.current}"
+								href={`${routes[item['_type']]}/${item?.slug?.current}`}
 								class="{active
 									? 'max-xl:text-lg max-xl:font-heading max-xl:font-bold'
 									: ''}link-underline-inverted">{item?.title}</a

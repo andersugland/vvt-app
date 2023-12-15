@@ -6,9 +6,15 @@
 	import PhoneIcon from '$lib/assets/PhoneIcon.svelte';
 	import Svg from '$lib/components/Svg.svelte';
 	export let logo, contactInformation, footer;
+
 	$: ({ openingHours, email, phoneNumber, whatsapp, instagram, facebook } = contactInformation);
 	$: ({ aboutUs, places, services, logos } = footer);
-	console.log('footer', footer.services);
+
+	const routes = {
+		page: '',
+		service: '/diensten',
+		place: '/steden'
+	};
 </script>
 
 <footer class="grid gap-8 py-2 text-secondary pt-small md:pt-medium">
@@ -34,7 +40,11 @@
 				<h3>Over ons</h3>
 				<ul class="max-w-[18ch]">
 					{#each aboutUs as item}
-						<li>{item?.title}</li>
+						<li>
+							<a href={`${routes[item['_type']]}/${item?.slug?.current}`}>
+								{item?.title}
+							</a>
+						</li>
 					{/each}
 				</ul>
 			</div>
@@ -42,7 +52,11 @@
 				<h3>Diensten</h3>
 				<ul class="max-w-[18ch]">
 					{#each services as item}
-						<li>{item?.title}</li>
+						<li>
+							<a href={`${routes[item['_type']]}/${item?.slug?.current}`}>
+								{item?.title}
+							</a>
+						</li>
 					{/each}
 				</ul>
 			</div>
@@ -50,7 +64,11 @@
 				<h3>Steden</h3>
 				<ul class="max-w-[18ch]">
 					{#each places as item}
-						<li>{item?.title}</li>
+						<li>
+							<a href={`${routes[item['_type']]}/${item?.slug?.current}`}>
+								{item?.title}
+							</a>
+						</li>
 					{/each}
 				</ul>
 			</div>
