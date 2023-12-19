@@ -8,7 +8,7 @@
 	export let logo, contactInformation, footer;
 
 	$: ({ openingHours, email, phoneNumber, whatsapp, instagram, facebook } = contactInformation);
-	$: ({ aboutUs, places, services, logos } = footer);
+	$: ({ aboutUs, places, services, logos, secondaryMenu } = footer);
 
 	const routes = {
 		page: '',
@@ -127,11 +127,15 @@
 	<div
 		class="container px-2 md:px-4 flex flex-col md:flex-row md:justify-between gap-4 text-sm text-gray"
 	>
-		<ul class="flex gap-5">
-			<li>1</li>
-			<li>Particuliere verhuizing</li>
-			<li>3</li>
-		</ul>
+		{#if secondaryMenu}
+			<ul class="flex gap-5">
+				{#each secondaryMenu as item}
+					<li>
+						<a href={item?.link?.url}>{item?.title}</a>
+					</li>
+				{/each}
+			</ul>
+		{/if}
 		<p>
 			© Copyright 2024 - Made by <a
 				href="https://codekompaan.nl"

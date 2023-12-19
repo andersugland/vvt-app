@@ -276,6 +276,22 @@ export async function getFooter() {
 				logos[] {
 					logo
 				},
+				'secondaryMenu': secondaryMenu.menuItems[] {
+					title,
+					'variant': url.variant,
+					'link': select(
+						url.variant == 'internal' => url.internal->{
+							'url': select(
+								_type == 'service' => '/tjenester/',
+								_type == 'project' => '/prosjekter/',
+								'/'
+							) + slug.current,
+						},
+						url.variant == 'external' => url{
+							'url': external
+						}
+					)
+				}
 			}
 		}`
 	);

@@ -41,8 +41,6 @@
 	});
 
 	// console.log(srcSet);
-
-	console.log;
 </script>
 
 <img

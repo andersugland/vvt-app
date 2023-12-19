@@ -2,7 +2,6 @@
 	import Blocks from '$lib/components/Blocks.svelte';
 	export let data;
 	$: ({ title, blocks } = data.page);
-	console.log('service page', data.page);
 </script>
 
 {#if blocks}

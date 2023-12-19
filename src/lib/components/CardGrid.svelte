@@ -4,7 +4,6 @@
 	import Button from '$lib/components/Button.svelte';
 	export let data;
 	$: ({ cards, showSertificates, sertificates } = data);
-	console.log('cardGrid', data);
 
 	const routes = {
 		page: '',
@@ -38,9 +37,11 @@
 								<Svg image={item?.icon} loading={'eager'} styling="w-12 h-12" />
 							{/if}
 							{#if item?.title}
-								<h3 class="text-white text-">
-									{item?.title}
-								</h3>
+								<div class="w-full flex justify-center">
+									<h3 class="text-white text-lg max-w-[10ch] text-center">
+										{item?.title}
+									</h3>
+								</div>
 							{/if}
 						</div>
 					</a>

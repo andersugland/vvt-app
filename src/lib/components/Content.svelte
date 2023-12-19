@@ -5,8 +5,8 @@
 	$: ({ content } = data);
 </script>
 
-<section class="overlap container px-2 md:px-4 grid md:grid-cols-12 md:gap-5 py-small">
-	<div class="content md:col-start-2 md:col-end-9">
+<section class="overlap container px-2 md:px-4 grid lg:grid-cols-12 lg:gap-5 py-small">
+	<div class="content lg:col-start-2 lg:col-end-10 xl:col-start-2 xl:col-end-9">
 		<BlockContent {content} />
 	</div>
 </section>

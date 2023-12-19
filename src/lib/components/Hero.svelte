@@ -5,7 +5,7 @@
 	$: ({ image, title, lead, cta } = data);
 </script>
 
-<section class="grid">
+<section class="hero grid">
 	{#if image}
 		<div class="col-start-1 row-start-1 h-full min-h-screen max-h-screen">
 			<Image {image} maxWidth={2560} maxHeight={1440} styling="w-full h-full object-cover" />

@@ -14,22 +14,6 @@ export default {
 				primary: '#F39200',
 				secondary: '#124697'
 			},
-			// keyframes: {
-			// 	dance: {
-			// 		'0%, 100%': {
-			// 			opacity: '1',
-			// 			transform: 'rotate(0deg) scale(1) translate(0, 0)'
-			// 		},
-			// 		'50%': {
-			// 			opacity: '.85',
-			// 			transform: 'rotate(180deg) scale(1.5) translate(20px, 20px)'
-			// 		}
-			// 	}
-			// },
-			// animation: {
-			// 	'spin-slow': 'spin 15s linear infinite',
-			// 	dance: 'dance 20s linear infinite'
-			// },
 			gridTemplateColumns: {
 				imageOutside: '1fr 1fr 1fr'
 			},
@@ -46,14 +30,6 @@ export default {
 				'2xl': ['3.157rem', '110%'],
 				'3xl': ['4.290rem', '110%'],
 				huge: ['5.61rem', '1em']
-				// sm: ['15px', '1.8em'],
-				// body: ['20px', '1.8em'],
-				// md: ['26.66px', '1.8em'],
-				// lg: ['35.54px', '110%'],
-				// xl: ['47.37px', '110%'],
-				// '2xl': ['63.15px', '110%'],
-				// '3xl': ['84.17px', '110%'],
-				// huge: ['221.78px', '1em']
 			},
 			spacing: {
 				tiny: '20px',

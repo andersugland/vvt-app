@@ -40,6 +40,14 @@
 	section + section:not(.overlap) {
 		@apply mt-small md:mt-medium
 	}
+
+	section:first-child:not(.hero) {
+		@apply mt-medium md:mt-large;
+	}
+
+	.ullers li:first-child:not(.not) {
+		@apply border-2 border-secondary;
+	}
 }
 
 @layer components {
