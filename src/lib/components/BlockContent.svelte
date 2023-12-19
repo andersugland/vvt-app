@@ -13,9 +13,11 @@
 	onMissingComponent={false}
 	components={{
 		block: {
+			h1: CustomHeading,
 			h2: CustomHeading,
 			h3: CustomHeading,
-			h4: CustomHeading
+			h4: CustomHeading,
+			h5: CustomHeading
 		},
 		marks: {
 			link: UrlAnnotation,
