@@ -6,6 +6,9 @@
 	import Cta from '$lib/components/CTA.svelte';
 	import Content from '$lib/components/Content.svelte';
 	import CardGrid from '$lib/components/CardGrid.svelte';
+	import SimpleCta from './SimpleCTA.svelte';
+	import Quote from './Quote.svelte';
+	import USPsBlock from './USPsBlock.svelte';
 
 	export let blocks;
 </script>
@@ -28,6 +31,9 @@
 			{#if block['_type'] === 'ctaBlock'}
 				<Cta data={block} />
 			{/if}
+			{#if block['_type'] === 'simpleCTA'}
+				<SimpleCta data={block} />
+			{/if}
 			{#if block['_type'] === 'content'}
 				<Content data={block} />
 			{/if}
@@ -35,7 +41,10 @@
 				<CardGrid data={block} />
 			{/if}
 			{#if block['_type'] == 'quote'}
-				<!-- <CardGrid data={block} /> -->
+				<Quote data={block} />
+			{/if}
+			{#if block['_type'] == 'uspsBlock'}
+				<USPsBlock data={block} />
 			{/if}
 		{/key}
 	{/each}

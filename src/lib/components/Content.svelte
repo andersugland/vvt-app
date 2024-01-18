@@ -13,7 +13,7 @@
 
 <style lang="postcss">
 	:global(.content p:not(:first-child)) {
-		@apply mt-4;
+		@apply mt-text-spacing;
 	}
 
 	:global(

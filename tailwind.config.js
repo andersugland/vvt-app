@@ -32,6 +32,7 @@ export default {
 				huge: ['5.61rem', '1em']
 			},
 			spacing: {
+				'text-spacing': '1.375rem',
 				tiny: '20px',
 				xsmall: '50px',
 				small: '105px',
@@ -45,6 +46,9 @@ export default {
 			},
 			content: {
 				'arrow-right': 'url("./lib/assets/arrow-right.svg")'
+			},
+			scale: {
+				'-100': '-1'
 			}
 		}
 	},

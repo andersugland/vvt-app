@@ -161,6 +161,7 @@ export async function getFrontPage() {
 					variant,
 					title,
 					lead,
+					body,
 					cta,
 					images
 				},
@@ -229,6 +230,24 @@ export async function getFrontPage() {
 						)
 					}
 				},
+				_type == 'simpleCTA' => {
+					title,
+					'cta': cta[] {
+						title,
+						'link': select(
+							url.variant == 'internal' => url.internal->{
+								'url': select(
+									_type == 'service' => '/tjenester/',
+									_type == 'project' => '/prosjekter/',
+									'/'
+								) + slug.current,
+							},
+							url.variant == 'external' => url{
+								'url': external
+							}
+						)
+					}
+				},
 				_type == 'content' => {
 					content
 				},
@@ -260,7 +279,19 @@ export async function getFrontPage() {
 								)
 							}
 						}
-				}
+				},
+				_type == 'quote' => {
+					quote,
+					quotee,
+				},
+				_type == 'uspsBlock' => {
+					title,
+					lead,
+					usps[],
+					googleRating,
+					ctaTitle,
+					cta,
+				},
 			}
 		}`
 	);
@@ -328,6 +359,7 @@ export async function getPage(slug) {
 						variant,
 						title,
 						lead,
+						body,
 						cta,
 						images
 					},
@@ -396,6 +428,24 @@ export async function getPage(slug) {
 							)
 						}
 					},
+					_type == 'simpleCTA' => {
+						title,
+						'cta': cta[] {
+							title,
+							'link': select(
+								url.variant == 'internal' => url.internal->{
+									'url': select(
+										_type == 'service' => '/tjenester/',
+										_type == 'project' => '/prosjekter/',
+										'/'
+									) + slug.current,
+								},
+								url.variant == 'external' => url{
+									'url': external
+								}
+							)
+						}
+					},
 					_type == 'content' => {
 						content
 					},
@@ -427,7 +477,19 @@ export async function getPage(slug) {
 								)
 							}
 						}
-					}
+					},
+					_type == 'quote' => {
+						quote,
+						quotee,
+					},
+					_type == 'uspsBlock' => {
+						title,
+						lead,
+						usps[],
+						googleRating,
+						ctaTitle,
+						cta,
+					},
 				}
 			}
 		}`,
