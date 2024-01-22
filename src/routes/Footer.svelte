@@ -28,6 +28,7 @@
 					{#each logos as logo}
 						<li>
 							<Svg image={logo.logo} loading={'eager'} styling="w-10 h-10 md:w-12 md:h-12" />
+							{console.log(logo?.logo)}}
 						</li>
 					{/each}
 				{/if}

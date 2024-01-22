@@ -5,87 +5,18 @@
 	export let data;
 	$: ({ title, lead, usps, googleRating, ctaTitle, cta } = data);
 
+	console.log(data.usps);
+
 	const variants = {
 		transparent: 'bg-transparent text-dark',
 		primary: 'radial-gradient-primary text-white selection:bg-secondary',
 		secondary: 'radial-gradient-secondary text-white'
 	};
-
-	const images = false,
-		body = false;
 </script>
 
 <section class="mt-12">
 	<div class="container px-2 md:px-4 grid lg:grid-cols-12 gap-5 pb-medium">
-		<!-- {#if images}
-			<div class="lg:col-start-7 lg:col-end-13 grid grid-cols-6 gap-5 -mt-8 lg:-mt-12">
-				{#if data.images.portraitOne}
-					<div class="relative col-start-2 col-span-2 row-start-1 row-span-3 aspect-[9/14]">
-						<div
-							class="absolute w-full h-full rounded-lg border-[3px] {variant === 'transparent'
-								? 'border-secondary'
-								: 'border-white'}"
-						>
-							<Image
-								image={data.images.portraitOne.image}
-								maxWidth={250}
-								maxHeight={450}
-								styling="absolute inset-x-4 -inset-y-4 w-full h-full object-cover rounded-lg"
-							/>
-						</div>
-					</div>
-				{/if}
-				{#if data.images.portraitTwo}
-					<div class="relative col-start-4 col-span-2 row-start-2 row-span-3 w-fullaspect-[9/14]">
-						<div
-							class="absolute ml-8 w-full h-full rounded-lg border-[3px] {variant === 'transparent'
-								? 'border-primary'
-								: 'border-white'}"
-						>
-							<Image
-								image={data.images.portraitTwo.image}
-								maxWidth={250}
-								maxHeight={450}
-								styling="absolute -inset-x-4 -inset-y-4 w-full h-full object-cover rounded-lg"
-							/>
-						</div>
-					</div>
-				{/if}
-				{#if data.images.landscapeOne}
-					<div class="relative col-start-1 col-span-3 row-start-4 row-span-2 w-full aspect-[16/9]">
-						<div
-							class="absolute w-full h-full border-[3px] {variant === 'transparent'
-								? 'border-primary'
-								: 'border-white'} rounded-lg"
-						>
-							<Image
-								image={data.images.landscapeOne.image}
-								maxWidth={450}
-								maxHeight={250}
-								styling="absolute inset-x-4 -inset-y-4 w-full h-full object-cover rounded-lg"
-							/>
-						</div>
-					</div>
-				{/if}
-				{#if data.images.landscapeTwo}
-					<div class="relative col-start-4 col-span-3 row-start-5 row-span-2 w-full aspect-[16/9]">
-						<div
-							class="absolute ml-8 w-full h-full border-[3px] {variant === 'transparent'
-								? 'border-secondary'
-								: 'border-white'} rounded-lg"
-						>
-							<Image
-								image={data.images.landscapeTwo.image}
-								maxWidth={450}
-								maxHeight={250}
-								styling="absolute -inset-x-4 -inset-y-4 w-full h-full object-cover rounded-lg"
-							/>
-						</div>
-					</div>
-				{/if}
-			</div>
-		{/if} -->
-		<div class="col-start-1 lg:col-end-8 lg:row-start-1 mt-8 lg:mt-12 self-center">
+		<div class="col-start-1 lg:col-end-8 mt-8 lg:mt-12 self-center">
 			{#if title}
 				<h2 class="text-2xl">{title}</h2>
 			{/if}
@@ -96,18 +27,23 @@
 			</div>
 		</div>
 		{#if usps}
-			<ul class="col-start-9 lg:col-end-13 grid grid-cols-2 gap-4">
-				{#each usps as usp}
-					<li class="grid gap-4 rounded-lg radial-gradient-primary p-3">
-						<div class="flex">
-							{#if usp.icon}
-								<!-- <Svg image={usp?.icon} /> -->
-								icon
+			<ul
+				class="row-start-2 col-span-full lg:col-start-1 lg:col-end-8 xl:row-start-1 xl:col-start-8 xl:col-end-13 grid grid-cols-2 gap-4"
+			>
+				{#each usps as usp, index}
+					<li
+						class="grid gap-4 rounded-lg p-6 {index % 3 === 0
+							? variants.primary
+							: variants.secondary}"
+					>
+						<div class="flex justify-between">
+							{#if usp.icon.logo}
+								<Svg image={usp?.icon.logo} loading={'eager'} styling="w-6 h-6" />
 							{/if}
-							<h3>{usp.title}</h3>
+							<h3 class="text-md">{usp.title}</h3>
 						</div>
 						{#if usp.text}
-							<div class="">
+							<div class="text-sm max-w-[17ch]">
 								<p>{usp.text}</p>
 							</div>
 						{/if}
@@ -153,9 +89,14 @@
 					</div>
 				{/if}
 				{#if ctaTitle && cta}
-					<div>
-						{ctaTitle}
-						<Button title={cta?.title} link={cta?.link?.url} variant={'secondary'} />
+					<div class="grid text-center">
+						<p>{ctaTitle}</p>
+						<Button
+							title={cta?.title}
+							link={cta?.link?.url}
+							variant={'secondary'}
+							fullWidth={true}
+						/>
 					</div>
 				{/if}
 			</ul>
