@@ -9,6 +9,7 @@
 	import SimpleCta from './SimpleCTA.svelte';
 	import Quote from './Quote.svelte';
 	import USPsBlock from './USPsBlock.svelte';
+	import Testimonial from './Testimonial.svelte';
 
 	export let blocks;
 </script>
@@ -45,6 +46,9 @@
 			{/if}
 			{#if block['_type'] == 'uspsBlock'}
 				<USPsBlock data={block} />
+			{/if}
+			{#if block['_type'] == 'testimonial'}
+				<Testimonial data={block} />
 			{/if}
 		{/key}
 	{/each}

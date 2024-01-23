@@ -292,6 +292,32 @@ export async function getFrontPage() {
 					ctaTitle,
 					cta,
 				},
+				_type == 'testimonial' => {
+					variant,
+					title,
+					lead,
+					body,
+					'cta': cta[] {
+						title,
+						'link': select(
+							url.variant == 'internal' => url.internal->{
+								'url': select(
+									_type == 'service' => '/tjenester/',
+									_type == 'project' => '/prosjekter/',
+									'/'
+								) + slug.current,
+							},
+							url.variant == 'external' => url{
+								'url': external
+							}
+						)
+					},
+					testimony {
+						name,
+						stars,
+						text,
+					}
+				},
 			}
 		}`
 	);
@@ -489,6 +515,32 @@ export async function getPage(slug) {
 						googleRating,
 						ctaTitle,
 						cta,
+					},
+					_type == 'testimonial' => {
+						variant,
+						title,
+						lead,
+						body,
+						'cta': cta[] {
+							title,
+							'link': select(
+								url.variant == 'internal' => url.internal->{
+									'url': select(
+										_type == 'service' => '/tjenester/',
+										_type == 'project' => '/prosjekter/',
+										'/'
+									) + slug.current,
+								},
+								url.variant == 'external' => url{
+									'url': external
+								}
+							)
+						},
+						testimony {
+							name,
+							stars,
+							text,
+						}
 					},
 				}
 			}
