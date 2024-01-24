@@ -5,8 +5,6 @@
 	export let data;
 	$: ({ title, lead, usps, googleRating, ctaTitle, cta } = data);
 
-	console.log(data.usps);
-
 	const variants = {
 		transparent: 'bg-transparent text-dark',
 		primary: 'radial-gradient-primary text-white selection:bg-secondary',
@@ -16,7 +14,7 @@
 
 <section class="mt-12">
 	<div class="container px-2 md:px-4 grid lg:grid-cols-12 gap-5 pb-medium">
-		<div class="col-start-1 lg:col-end-8 mt-8 lg:mt-12 self-center">
+		<div class="col-start-1 lg:col-end-6 mt-8 lg:mt-12 self-center">
 			{#if title}
 				<h2 class="text-2xl">{title}</h2>
 			{/if}

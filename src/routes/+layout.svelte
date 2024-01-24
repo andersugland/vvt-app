@@ -19,3 +19,25 @@
 	<slot />
 	<Footer {logo} {contactInformation} {footer} />
 </div>
+
+<style>
+	:global(h1, .h1) {
+		@apply text-3xl;
+	}
+
+	:global(h2, .h2) {
+		@apply text-2xl;
+	}
+
+	:global(h3, .h3) {
+		@apply text-xl;
+	}
+
+	:global(h4, .h4) {
+		@apply text-lg;
+	}
+
+	:global(h5, .h5) {
+		@apply text-md;
+	}
+</style>

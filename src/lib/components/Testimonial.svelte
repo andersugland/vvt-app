@@ -10,7 +10,7 @@
 	};
 </script>
 
-<section class={variants[variant]}>
+<section class="{variants[variant]} min-h-[450px] md:min-h-[600px] grid place-items-center">
 	{#if variant === 'primary' || variant === 'secondary'}
 		<div class="container px-2 md:px-4 py-small">
 			<div class="grid grid-cols-12">
@@ -44,41 +44,46 @@
 				</div>
 				{#if testimony}
 					<div
-						class="row-start-1 col-start-8 col-end-12 rounded-lg p-10 {variant === 'primary'
-							? variants['secondary']
-							: variants['primary']}"
+						class="relative row-start-1 col-start-8 col-end-12 after:block after:w-full after:h-full after:absolute after:z-0 after:top-6 after:left-6 after:border-[3px] after:border-white after:rounded-lg"
 					>
-						{#if testimony?.name}
-							<h3>{testimony?.name}</h3>
-						{/if}
-						{#if testimony?.stars}
-							<ul class="flex">
-								{#if testimony.stars === 5}
-									<li><StarIcon /></li>
-									<li><StarIcon /></li>
-									<li><StarIcon /></li>
-									<li><StarIcon /></li>
-									<li><StarIcon /></li>
-								{:else if testimony.stars === 4}
-									<li><StarIcon /></li>
-									<li><StarIcon /></li>
-									<li><StarIcon /></li>
-									<li><StarIcon /></li>
-								{:else if testimony.stars === 3}
-									<li><StarIcon /></li>
-									<li><StarIcon /></li>
-									<li><StarIcon /></li>
-								{:else if testimony.stars === 2}
-									<li><StarIcon /></li>
-									<li><StarIcon /></li>
-								{:else if testimony.stars === 1}
-									<li><StarIcon /></li>
-								{/if}
-							</ul>
-						{/if}
-						{#if testimony?.name}
-							<p class="mt-8">{testimony?.text}</p>
-						{/if}
+						<div
+							class="relative z-10 row-start-1 col-start-8 col-end-12 rounded-lg p-10 {variant ===
+							'primary'
+								? variants['secondary']
+								: variants['primary']} "
+						>
+							{#if testimony?.name}
+								<h3>{testimony?.name}</h3>
+							{/if}
+							{#if testimony?.stars}
+								<ul class="flex">
+									{#if testimony.stars === 5}
+										<li><StarIcon /></li>
+										<li><StarIcon /></li>
+										<li><StarIcon /></li>
+										<li><StarIcon /></li>
+										<li><StarIcon /></li>
+									{:else if testimony.stars === 4}
+										<li><StarIcon /></li>
+										<li><StarIcon /></li>
+										<li><StarIcon /></li>
+										<li><StarIcon /></li>
+									{:else if testimony.stars === 3}
+										<li><StarIcon /></li>
+										<li><StarIcon /></li>
+										<li><StarIcon /></li>
+									{:else if testimony.stars === 2}
+										<li><StarIcon /></li>
+										<li><StarIcon /></li>
+									{:else if testimony.stars === 1}
+										<li><StarIcon /></li>
+									{/if}
+								</ul>
+							{/if}
+							{#if testimony?.name}
+								<p class="mt-8">{testimony?.text}</p>
+							{/if}
+						</div>
 					</div>
 				{/if}
 			</div>

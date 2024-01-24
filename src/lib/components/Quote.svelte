@@ -11,7 +11,7 @@
 				<QuoteIcon />
 			</div>
 			<div class="grid gap-4">
-				<h2>{quote}</h2>
+				<h2 class="">{quote}</h2>
 				{#if quotee}
 					<p class="text-md flex gap-2 justify-end pr-8 before:content-['—'] mb-4">
 						{quotee}

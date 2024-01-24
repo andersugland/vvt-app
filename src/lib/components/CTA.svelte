@@ -12,7 +12,7 @@
 	};
 </script>
 
-<section class={variants[variant]}>
+<section class="{variants[variant]} min-h-[450px] md:min-h-[600px] grid place-items-center">
 	{#if variant === 'sideImage'}
 		<div class="grid md:grid-cols-6 gap-8 lg:gap-12 xl:gap-20 items-center py-12 md:py-0">
 			{#if image}

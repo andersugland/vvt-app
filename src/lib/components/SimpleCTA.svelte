@@ -14,13 +14,13 @@
 <section>
 	<div class="grid gap-12 container px-2 md:px-4 text-center text-3xl max-w-[22ch]">
 		{#if title}
-			<h2>{title}</h2>
+			<h2 class="text-2xl">{title}</h2>
 		{/if}
 		{#if cta}
 			<ul class="flex gap-5 justify-center items-center">
 				{#each cta as item}
 					<li>
-						<Button title={item?.title} link={item?.link?.url} variant={'primary'} size="large" />
+						<Button title={item?.title} link={item?.link?.url} variant={'secondary'} size="large" />
 					</li>
 				{/each}
 			</ul>

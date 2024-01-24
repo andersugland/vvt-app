@@ -53,7 +53,7 @@
 						</li>
 					{/each}
 					{#if navCTA}
-						<li><Button title={navCTA?.title} link="#" size={active ? 'large' : 'small'} /></li>
+						<li><Button title={navCTA?.title} link="#" size={active ? 'large' : ''} /></li>
 					{/if}
 				</ul>
 			</div>

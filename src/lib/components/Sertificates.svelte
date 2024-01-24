@@ -28,14 +28,10 @@
 				</div>
 			{/if}
 			{#if sertificates}
-				<ul class="grid grid-cols-2 md:grid-cols-3 mt-12 md:mt-24 gap-12">
+				<ul class="grid grid-cols-2 md:grid-cols-3 mt-12 gap-10">
 					{#each sertificates as sertificate}
 						<li>
-							<Svg
-								image={sertificate?.logo}
-								loading={'eager'}
-								styling="w-32 h-32 lg:w-40 lg:h-40"
-							/>
+							<Svg image={sertificate?.logo} loading={'eager'} styling="w-28 h-28" />
 						</li>
 					{/each}
 				</ul>

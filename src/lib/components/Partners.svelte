@@ -11,7 +11,7 @@
 		</div>
 	{/if}
 	{#if partners}
-		<ul class="grid grid-cols-2 md:grid-cols-3 mt-12 md:mt-24 gap-2">
+		<ul class="grid grid-cols-2 md:grid-cols-3 mt-12 md:mt-18 gap-2">
 			{#each partners as partner}
 				<li class="grid place-items-center">
 					<Svg image={partner?.logo} loading={'eager'} styling="w-32 h-32 lg:w-52 lg:h-52" />

@@ -10,9 +10,9 @@
 	if (size === 'regular') {
 		sizeClass = 'py-[10px] px-8';
 	} else if (size === 'large') {
-		sizeClass = 'py-[10px] px-8 text-xl';
+		sizeClass = 'py-4 px-12 text-md';
 	} else {
-		sizeClass = 'py-3 px-6';
+		sizeClass = 'py-[10px] px-4';
 	}
 </script>
 
@@ -20,7 +20,7 @@
 	href={link}
 	class="{fullWidth === true ? '' : 'max-w-max'} {sizeClass} {variant === 'secondary'
 		? 'radial-gradient-secondary selection:bg-primary'
-		: 'radial-gradient-primary'} relative text-white selection:bg-secondary rounded-[5px] font-heading font-semibold text-sm grid place-items-center cursor-pointer transition-all duration-300 ease-quint-out hover:bg-blue"
+		: 'radial-gradient-primary'} relative text-white selection:bg-secondary rounded-[5px] font-heading font-semibold grid place-items-center cursor-pointer transition-all duration-300 ease-quint-out hover:bg-blue"
 >
 	{title}
 </a>
