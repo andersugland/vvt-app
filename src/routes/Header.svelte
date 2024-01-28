@@ -1,6 +1,7 @@
 <script>
 	import Svg from '$lib/components/Svg.svelte';
 	import Button from '$lib/components/Button.svelte';
+	import { afterNavigate } from '$app/navigation';
 	export let logo, mainMenu, navCTA;
 
 	const routes = {
@@ -14,6 +15,10 @@
 	const toggleMainMenu = () => {
 		active = !active;
 	};
+
+	afterNavigate(() => {
+		active = false;
+	});
 </script>
 
 <header
