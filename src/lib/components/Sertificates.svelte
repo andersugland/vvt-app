@@ -6,9 +6,9 @@
 </script>
 
 <section class="radial-gradient-secondary text-white mt-24">
-	<div class="container px-2 md:px-4 grid grid-cols-3 gap-x-5 gap-y-12 md:gap-y-24">
+	<div class="container px-2 md:px-4 grid grid-cols-3 lg:grid-cols-12 gap-x-5 gap-y-12 md:gap-y-24">
 		{#if image}
-			<div class="col-start-2 col-end-4 lg:col-start-3 lg:col-end-4">
+			<div class="col-start-2 col-end-4 lg:col-start-8 lg:col-end-13 2xl:col-end-12 pr-12">
 				<div
 					class="relative w-full h-full min-h-[450px] max-h-[550px] md:min-h-[550px] xl:min-h-[700px] xl:max-h-[700px] -mt-24 before:block before:w-full before:h-full before:border-[3px] before:border-white before:absolute before:rounded-t-full before:top-8 before:left-8 lg:before:top-12 lg:before:left-12"
 				>
@@ -21,7 +21,7 @@
 				</div>
 			</div>
 		{/if}
-		<div class="col-start-1 col-end-3 lg:row-start-1 lg:pt-medium lg:pb-small">
+		<div class="col-start-1 col-end-3 lg:row-start-1 lg:col-end-6 lg:pt-medium lg:pb-small">
 			{#if title}
 				<div class="">
 					<h2 class="text-2xl max-w-[20ch]">{title}</h2>

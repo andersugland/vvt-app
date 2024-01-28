@@ -13,8 +13,10 @@
 <section class="{variants[variant]} min-h-[450px] md:min-h-[600px] grid place-items-center">
 	{#if variant === 'primary' || variant === 'secondary'}
 		<div class="container px-2 md:px-4 py-small">
-			<div class="grid grid-cols-12">
-				<div class="row-start-1 col-start-1 col-end-8 relative z-0 grid gap-5 max-w-[750px]">
+			<div class="grid grid-cols-12 gap-y-20 lg:gap-y-0">
+				<div
+					class="col-start-2 col-end-12 md:col-start-1 lg:col-end-5 xl:col-end-6 relative z-0 grid gap-5 max-w-[750px] lg:mt-0"
+				>
 					{#if title}
 						<h2 class="text-2xl">{title}</h2>
 					{/if}
@@ -29,7 +31,7 @@
 						</p>
 					{/if}
 					{#if cta}
-						<ul class="flex gap-5 mt-4">
+						<ul class="flex gap-5 mt-3 lg:mt-0">
 							{#each cta as item}
 								<li>
 									<Button
@@ -44,7 +46,7 @@
 				</div>
 				{#if testimony}
 					<div
-						class="relative row-start-1 col-start-8 col-end-12 after:block after:w-full after:h-full after:absolute after:z-0 after:top-6 after:left-6 after:border-[3px] after:border-white after:rounded-lg"
+						class="relative row-start-1 col-start-2 col-end-11 md:col-start-1 md:col-end-10 lg:col-start-6 lg:col-end-12 xl:col-start-7 after:block after:w-full after:h-full after:absolute after:z-0 after:top-6 after:left-6 after:border-[3px] after:border-white after:rounded-lg"
 					>
 						<div
 							class="relative z-10 row-start-1 col-start-8 col-end-12 rounded-lg p-10 {variant ===
@@ -56,7 +58,7 @@
 								<h3>{testimony?.name}</h3>
 							{/if}
 							{#if testimony?.stars}
-								<ul class="flex">
+								<ul class="flex mt-1 md:mt-3">
 									{#if testimony.stars === 5}
 										<li><StarIcon /></li>
 										<li><StarIcon /></li>
@@ -80,8 +82,8 @@
 									{/if}
 								</ul>
 							{/if}
-							{#if testimony?.name}
-								<p class="mt-8">{testimony?.text}</p>
+							{#if testimony?.text}
+								<p class="mt-4 md:mt-8">{testimony?.text}</p>
 							{/if}
 						</div>
 					</div>

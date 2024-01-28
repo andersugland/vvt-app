@@ -18,9 +18,14 @@
 		{/if}
 		{#if cta}
 			<ul class="flex gap-5 justify-center items-center">
-				{#each cta as item}
+				{#each cta as item, index}
 					<li>
-						<Button title={item?.title} link={item?.link?.url} variant={'secondary'} size="large" />
+						<Button
+							title={item?.title}
+							link={item?.link?.url}
+							variant={index % 2 === 0 ? 'primary' : 'secondary'}
+							size="large"
+						/>
 					</li>
 				{/each}
 			</ul>

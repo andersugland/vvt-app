@@ -4,8 +4,8 @@
 	$: ({ quote, quotee } = data);
 </script>
 
-<section>
-	<div class="grid gap-6 container px-2 md:px-4 text-center text-3xl max-w-[22ch]">
+<section class="grid grid-cols-12">
+	<div class="col-start-2 col-end-12 grid container px-2 md:px-4 text-center text-3xl max-w-[22ch]">
 		{#if quote}
 			<div class="-scale-x-100 justify-self-start">
 				<QuoteIcon />
@@ -13,7 +13,7 @@
 			<div class="grid gap-4">
 				<h2 class="">{quote}</h2>
 				{#if quotee}
-					<p class="text-md flex gap-2 justify-end pr-8 before:content-['—'] mb-4">
+					<p class="text-md flex gap-2 justify-end pr-8 lg:pr-16 before:content-['—'] mb-8">
 						{quotee}
 					</p>
 				{/if}

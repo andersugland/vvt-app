@@ -14,7 +14,7 @@
 
 <section class="container px-2 md:px-4">
 	{#if cards || showSertificates}
-		<ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+		<ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 			{#each cards as item}
 				<li class="group w-full h-full rounded-lg">
 					<a href={`${routes[item['_type']]}/${item?.slug?.current}`} class="grid">

@@ -13,10 +13,10 @@
 </script>
 
 <section class="mt-12">
-	<div class="container px-2 md:px-4 grid lg:grid-cols-12 gap-5 pb-medium">
-		<div class="col-start-1 lg:col-end-6 mt-8 lg:mt-12 self-center">
+	<div class="container px-2 md:px-4 grid lg:grid-cols-12 gap-10 xl:gap-5 pb-medium">
+		<div class="col-start-1 lg:col-end-13 xl:col-end-6 mt-8 lg:mt-12 self-center">
 			{#if title}
-				<h2 class="text-2xl">{title}</h2>
+				<h2 class="text-2xl max-w-[20ch]">{title}</h2>
 			{/if}
 			<div class="max-w-[50ch]">
 				{#if lead}
@@ -26,7 +26,7 @@
 		</div>
 		{#if usps}
 			<ul
-				class="row-start-2 col-span-full lg:col-start-1 lg:col-end-8 xl:row-start-1 xl:col-start-8 xl:col-end-13 grid grid-cols-2 gap-4"
+				class="row-start-2 col-span-full lg:col-start-1 lg:col-end-10 xl:row-start-1 xl:col-start-7 xl:col-end-13 2xl:col-start-8 grid grid-cols-2 gap-4"
 			>
 				{#each usps as usp, index}
 					<li

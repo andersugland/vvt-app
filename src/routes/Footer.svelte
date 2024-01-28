@@ -37,7 +37,7 @@
 	<div class="container px-2 md:px-4 grid lg:grid-cols-12 gap-5">
 		<div class="col-start-1 col-end-2 lg:col-start-7 lg:col-end-13 grid grid-cols-3 gap-5">
 			<div>
-				<h3>Over ons</h3>
+				<h3 class="text-md">Over ons</h3>
 				<ul class="max-w-[18ch]">
 					{#each aboutUs as item}
 						<li>
@@ -49,7 +49,7 @@
 				</ul>
 			</div>
 			<div>
-				<h3>Diensten</h3>
+				<h3 class="text-md">Diensten</h3>
 				<ul class="max-w-[18ch]">
 					{#each services as item}
 						<li>
@@ -61,7 +61,7 @@
 				</ul>
 			</div>
 			<div>
-				<h3>Steden</h3>
+				<h3 class="text-md">Steden</h3>
 				<ul class="max-w-[18ch]">
 					{#each places as item}
 						<li>
@@ -74,7 +74,7 @@
 			</div>
 		</div>
 		<div class="col-start-1 col-end-2 lg:row-start-1 lg:col-start-1 lg:col-end-6">
-			<h3>Contact</h3>
+			<h3 class="text-md">Contact</h3>
 			<ul>
 				{#if openingHours}
 					<li class="text-dark">{openingHours}</li>
