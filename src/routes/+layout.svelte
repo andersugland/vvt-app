@@ -20,7 +20,7 @@
 	<Footer {logo} {contactInformation} {footer} />
 </div>
 
-<style>
+<style lang="postcss">
 	:global(h1, .h1) {
 		@apply text-3xl;
 	}
@@ -39,5 +39,17 @@
 
 	:global(h5, .h5) {
 		@apply text-md;
+	}
+
+	:global(section, footer) {
+		@apply mt-small md:mt-medium;
+	}
+
+	:global(section + section:not(.overlap)) {
+		@apply mt-small md:mt-medium;
+	}
+
+	:global(section:first-child:not(.hero)) {
+		@apply mt-medium md:mt-large;
 	}
 </style>

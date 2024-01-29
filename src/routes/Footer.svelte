@@ -17,7 +17,7 @@
 	};
 </script>
 
-<footer class="grid gap-8 py-2 text-secondary pt-small md:pt-medium">
+<footer class="grid gap-8 pb-2 text-secondary">
 	<div class="container px-2 md:px-4">
 		<div class="flex justify-between">
 			<a href="/">
