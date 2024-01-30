@@ -16,10 +16,10 @@
 	>
 		<div class="col-start-1 col-end-6 self-end">
 			{#if title}
-				<h1 class="text-3xl">{title}</h1>
+				<h1>{title}</h1>
 			{/if}
 			{#if lead}
-				<p class="text-lead mt-4">{lead}</p>
+				<p class="text-md mt-4">{lead}</p>
 			{/if}
 			{#if cta}
 				<ul class="flex gap-5 mt-8">

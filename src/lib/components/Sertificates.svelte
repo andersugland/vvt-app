@@ -5,7 +5,7 @@
 	$: ({ title, image, sertificates } = data);
 </script>
 
-<section class="radial-gradient-secondary text-white mt-24">
+<section class="extra-spacing radial-gradient-secondary text-white mt-24">
 	<div class="container px-2 md:px-4 grid grid-cols-3 lg:grid-cols-12 gap-x-5 gap-y-12 md:gap-y-24">
 		{#if image}
 			<div class="col-start-2 col-end-4 lg:col-start-8 lg:col-end-13 2xl:col-end-12 pr-12">
@@ -24,7 +24,7 @@
 		<div class="col-start-1 col-end-3 lg:row-start-1 lg:col-end-6 lg:pt-medium lg:pb-small">
 			{#if title}
 				<div class="">
-					<h2 class="text-2xl max-w-[20ch]">{title}</h2>
+					<h2 class="max-w-[20ch]">{title}</h2>
 				</div>
 			{/if}
 			{#if sertificates}

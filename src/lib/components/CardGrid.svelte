@@ -38,7 +38,7 @@
 							{/if}
 							{#if item?.title}
 								<div class="w-full flex justify-center">
-									<h3 class="text-white text-lg max-w-[10ch] text-center">
+									<h3 class="text-white max-w-[10ch] text-center">
 										{item?.title}
 									</h3>
 								</div>
@@ -53,7 +53,7 @@
 				>
 					<div class="h-full flex flex-col gap-8 lg:gap-16 justify-center">
 						{#if sertificates?.title}
-							<h2 class="text-xl max-w-[18ch]">{sertificates?.title}</h2>
+							<h2 class="max-w-[18ch]">{sertificates?.title}</h2>
 						{/if}
 						{#if sertificates?.cta}
 							<Button

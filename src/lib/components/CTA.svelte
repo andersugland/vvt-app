@@ -15,10 +15,10 @@
 <section
 	class="{variants[
 		variant
-	]} min-h-[450px] md:min-h-[600px] lg:min-h-[700px] grid place-items-center"
+	]} extra-spacing min-h-[450px] md:min-h-[600px] lg:min-h-[700px] grid place-items-center"
 >
 	{#if variant === 'sideImage'}
-		<div class="grid md:grid-cols-6 gap-8 lg:gap-12 xl:gap-20 items-center py-12 md:py-0">
+		<div class="grid md:grid-cols-6 gap-8 lg:gap-12 xl:gap-20 items-center md:mb-14">
 			{#if image}
 				<div
 					class="sm:container px-2 md:px-0 md:col-start-1 md:col-end-3 w-full h-full max-h-[450px] md:min-h-[120%]"
@@ -34,7 +34,7 @@
 			<div class="md:col-start-3 md:col-end-7 container px-2 md:pr-4 md:py-12">
 				<div class="grid gap-5 items-center max-w-[750px]">
 					{#if title}
-						<h2 class="text-2xl">{title}</h2>
+						<h2>{title}</h2>
 					{/if}
 					{#if lead}
 						<p class="text-md">
@@ -81,7 +81,7 @@
 			>
 				<div class="relative z-0 grid gap-5 max-w-[750px]">
 					{#if title}
-						<h2 class="text-2xl">{title}</h2>
+						<h2>{title}</h2>
 					{/if}
 					{#if lead}
 						<p class="text-md">
@@ -110,7 +110,7 @@
 		<div class="container px-2 md:px-4 py-small">
 			<div class="relative z-0 grid gap-5 max-w-[750px]">
 				{#if title}
-					<h2 class="text-2xl">{title}</h2>
+					<h2>{title}</h2>
 				{/if}
 				{#if lead}
 					<p class="text-md">

@@ -12,7 +12,7 @@
 	};
 </script>
 
-<section class="{variants[variant]} mt-12">
+<section class="{variants[variant]} extra-spacing">
 	<div class="container px-2 md:px-4 grid lg:grid-cols-12 gap-5">
 		{#if images}
 			<div class="lg:col-start-7 lg:col-end-13 grid grid-cols-6 gap-5 -mt-8 lg:-mt-12">
@@ -84,7 +84,7 @@
 		{/if}
 		<div class="col-start-1 lg:col-end-6 lg:row-start-1 mt-8 lg:mt-12 self-center">
 			{#if title}
-				<h2 class="text-2xl max-w-[16ch]">{title}</h2>
+				<h2 class="max-w-[16ch]">{title}</h2>
 			{/if}
 			<div class="max-w-[50ch]">
 				{#if lead}

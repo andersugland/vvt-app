@@ -14,7 +14,7 @@
 	export let blocks;
 </script>
 
-<div>
+<div class="">
 	{#each blocks as block}
 		{#key block}
 			{#if block['_type'] === 'hero'}
