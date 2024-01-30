@@ -17,7 +17,7 @@
 </script>
 
 <a
-	href={link}
+	href={'#'}
 	class="{fullWidth === true ? '' : 'max-w-max'} {sizeClass} {variant === 'secondary'
 		? 'radial-gradient-secondary selection:bg-primary'
 		: 'radial-gradient-primary'} relative text-white selection:bg-secondary rounded-[5px] font-heading font-semibold grid place-items-center cursor-pointer transition-all duration-300 ease-quint-out hover:bg-blue"

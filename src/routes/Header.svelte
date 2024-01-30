@@ -19,6 +19,8 @@
 	afterNavigate(() => {
 		active = false;
 	});
+
+	//href={`${routes[item['_type']]}/${item?.slug?.current}`}
 </script>
 
 <header
@@ -50,7 +52,7 @@
 					{#each mainMenu as item}
 						<li>
 							<a
-								href={`${routes[item['_type']]}/${item?.slug?.current}`}
+								href={`#`}
 								class="{active
 									? 'max-xl:text-lg max-xl:font-heading max-xl:font-bold'
 									: ''}link-underline-inverted">{item?.title}</a
