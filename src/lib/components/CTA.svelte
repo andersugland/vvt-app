@@ -77,7 +77,7 @@
 				class="invisible pointer-events-none w-full h-full bg-gradient-to-b from-transparent via-secondary via-80% to-secondary opacity-80 md:visible md:row-start-1 md:col-start-1"
 			/>
 			<div
-				class="md:row-start-1 md:col-start-1 container px-2 md:px-4 md:py-small grid items-end md:text-white"
+				class="md:row-start-1 md:col-start-1 container px-2 md:px-4 md:py-sm grid items-end md:text-white"
 			>
 				<div class="relative z-0 grid gap-5 max-w-[750px]">
 					{#if title}
@@ -107,7 +107,7 @@
 		</div>
 	{/if}
 	{#if variant === 'primary' || variant === 'secondary'}
-		<div class="container px-2 md:px-4 py-small">
+		<div class="container px-2 md:px-4 py-sm">
 			<div class="relative z-0 grid gap-5 max-w-[750px]">
 				{#if title}
 					<h2>{title}</h2>

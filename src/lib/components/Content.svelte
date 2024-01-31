@@ -5,7 +5,7 @@
 	$: ({ content } = data);
 </script>
 
-<section class="container px-2 md:px-4 grid lg:grid-cols-12 lg:gap-5 py-small">
+<section class="container px-2 md:px-4 grid lg:grid-cols-12 lg:gap-5 py-sm">
 	<div class="content lg:col-start-2 lg:col-end-10 xl:col-start-2 xl:col-end-9">
 		<BlockContent {content} />
 	</div>

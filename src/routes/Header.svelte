@@ -46,7 +46,7 @@
 			>
 				<ul
 					class="{active
-						? 'max-xl:container max-xl:px-2 max-xl:md:px-4 max-xl:grid max-xl:gap-8 max-xl:pt-medium'
+						? 'max-xl:container max-xl:px-2 max-xl:md:px-4 max-xl:grid max-xl:gap-8 max-xl:pt-md'
 						: ''} xl:flex xl:items-center xl:gap-8"
 				>
 					{#each mainMenu as item}
@@ -60,7 +60,7 @@
 						</li>
 					{/each}
 					{#if navCTA}
-						<li><Button title={navCTA?.title} link="#" size={active ? 'large' : ''} /></li>
+						<li><Button title={navCTA?.title} link="#" size={active ? 'lg' : ''} /></li>
 					{/if}
 				</ul>
 			</div>

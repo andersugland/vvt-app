@@ -45,19 +45,22 @@
 		@apply min-h-[450px] md:min-h-[750px];
 	} */
 
-	:global(section:not(.hero), footer) {
-		@apply mt-small md:mt-medium;
+	:global(section:not(.hero)) {
+		@apply mt-sm md:mt-md;
 	}
 
-	:global(section.extra-spacing) {
-		@apply mt-medium md:mt-large;
+	:global(section.extra-spacing, footer) {
+		@apply mt-md md:mt-lg;
+	}
+	:global(section.extra-lg-spacing) {
+		@apply mt-md md:mt-lg xl:mt-xl;
 	}
 
 	/* :global(section + section:not(.overlap)) {
-		@apply mt-small md:mt-medium;
+		@apply mt-sm md:mt-md;
 	} */
 
 	:global(section:first-child:not(.hero)) {
-		@apply mt-medium md:mt-large;
+		@apply mt-md md:mt-lg;
 	}
 </style>

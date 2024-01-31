@@ -35,10 +35,11 @@ export default {
 			spacing: {
 				'text-spacing': '1.375rem',
 				tiny: '20px',
-				xsmall: '50px',
-				small: '105px',
-				medium: '150px',
-				large: '250px',
+				xs: '50px',
+				sm: '105px',
+				md: '150px',
+				lg: '250px',
+				xl: '300px',
 				gutter: '48px'
 			},
 			transitionTimingFunction: {
