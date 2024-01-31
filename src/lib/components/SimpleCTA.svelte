@@ -12,19 +12,18 @@
 </script>
 
 <section class="extra-spacing container px-4 pb-xs">
-	<div class="grid gap-12 text-center text-3xl max-w-[22ch] mx-auto">
+	<div class="grid gap-6 md:gap-8 text-center mx-auto">
 		{#if title}
-			<h2>{title}</h2>
+			<h2 class="max-w-[22ch] mx-auto">{title}</h2>
 		{/if}
 		{#if cta}
-			<ul class="flex flex-col md:flex-row gap-3 md:gap-5 justify-center items-center">
+			<ul class="flex gap-5 justify-center items-center">
 				{#each cta as item, index}
 					<li>
 						<Button
 							title={item?.title}
 							link={item?.link?.url}
 							variant={index % 2 === 0 ? 'primary' : 'secondary'}
-							size="lg"
 						/>
 					</li>
 				{/each}

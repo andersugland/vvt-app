@@ -104,7 +104,7 @@
 				{/if}
 			</div>
 			{#if cta}
-				<ul class="flex gap-5 mt-8">
+				<ul class="flex flex-col md:flex-row gap-3 md:gap-5 mt-4 md:mt-8">
 					{#each cta as item}
 						<li>
 							<Button

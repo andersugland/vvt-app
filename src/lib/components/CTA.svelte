@@ -47,7 +47,7 @@
 						</p>
 					{/if}
 					{#if cta}
-						<ul class="flex gap-5 mt-4">
+						<ul class="flex flex-col lg:flex-row gap-3 lg:gap-5 mt-4">
 							{#each cta as item}
 								<li>
 									<Button title={item?.title} link={item?.link?.url} />
@@ -94,7 +94,7 @@
 						</p>
 					{/if}
 					{#if cta}
-						<ul class="flex gap-5 mt-4">
+						<ul class="flex flex-col md:flex-row gap-3 md:gap-5 mt-4">
 							{#each cta as item}
 								<li>
 									<Button title={item?.title} link={item?.link?.url} />
@@ -123,7 +123,7 @@
 					</p>
 				{/if}
 				{#if cta}
-					<ul class="flex gap-5 mt-4">
+					<ul class="flex flex-col md:flex-row gap-3 md:gap-5 mt-4">
 						{#each cta as item}
 							<li>
 								<Button
