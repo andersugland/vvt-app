@@ -20,7 +20,7 @@
 				<p class="text-md mt-4 max-w-[28ch] lg:max-w-[40ch]">{lead}</p>
 			{/if}
 			{#if cta}
-				<ul class="flex gap-5 mt-8">
+				<ul class="flex flex-col md:flex-row gap-3 md:gap-5 mt-8">
 					{#each cta as item}
 						<li>
 							<Button title={item?.title} link={item?.link?.url} />

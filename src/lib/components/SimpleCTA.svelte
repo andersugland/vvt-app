@@ -17,7 +17,7 @@
 			<h2>{title}</h2>
 		{/if}
 		{#if cta}
-			<ul class="flex gap-5 justify-center items-center">
+			<ul class="flex flex-col md:flex-row gap-3 md:gap-5 justify-center items-center">
 				{#each cta as item, index}
 					<li>
 						<Button

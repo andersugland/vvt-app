@@ -15,7 +15,7 @@
 		<div class="container px-4 py-sm">
 			<div class="grid grid-cols-12 gap-y-20 lg:gap-y-0">
 				<div
-					class="col-start-2 col-end-12 md:col-start-1 lg:col-end-5 xl:col-end-6 relative z-0 grid gap-5 max-w-[750px] lg:mt-0"
+					class="col-start-2 col-end-10 md:col-start-1 lg:col-end-5 xl:col-end-6 relative z-0 grid gap-5 max-w-[750px] lg:mt-0"
 				>
 					{#if title}
 						<h2>{title}</h2>
@@ -31,7 +31,7 @@
 						</p>
 					{/if}
 					{#if cta}
-						<ul class="flex gap-5 mt-3 lg:mt-0">
+						<ul class="flex flex-col md:flex-row gap-3 md:gap-5 mt-3 lg:mt-0">
 							{#each cta as item}
 								<li>
 									<Button

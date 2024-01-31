@@ -41,7 +41,7 @@
 							<h3 class="text-md">{usp.title}</h3>
 						</div>
 						{#if usp.text}
-							<div class="text-s max-w-[17ch]">
+							<div class="max-w-[17ch]">
 								<p>{usp.text}</p>
 							</div>
 						{/if}
@@ -50,7 +50,7 @@
 				{#if googleRating}
 					<div class="grid text-center">
 						{#if googleRating?.score}
-							<p class="text-3xl font-heading">
+							<p class="text-huge md:text-[7rem] font-heading">
 								{googleRating.score}
 							</p>
 						{/if}
@@ -88,7 +88,7 @@
 				{/if}
 				{#if ctaTitle && cta}
 					<div class="flex flex-col text-center">
-						<h4 class="h-full flex items-center">{ctaTitle}</h4>
+						<h4 class="h-full flex items-center md:pb-5 xl:pb-0 2xl:pb-5">{ctaTitle}</h4>
 						<Button
 							title={cta?.title}
 							link={cta?.link?.url}
