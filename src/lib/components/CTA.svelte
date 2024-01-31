@@ -21,7 +21,7 @@
 		<div class="grid md:grid-cols-6 gap-8 lg:gap-12 xl:gap-20 items-center md:mb-14">
 			{#if image}
 				<div
-					class="sm:container px-4 md:px-0 md:col-start-1 md:col-end-3 w-full h-full max-h-[450px] md:min-h-[120%]"
+					class="sm:container px-4 md:px-0 md:col-start-1 md:col-end-3 w-full h-full max-h-[450px] md:max-h-none md:min-h-[120%]"
 				>
 					<Image
 						{image}
