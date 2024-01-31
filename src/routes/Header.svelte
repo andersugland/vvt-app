@@ -26,7 +26,7 @@
 <header
 	class="fixed z-50 top-0 w-full flex justify-between bg-white group {active ? 'active' : ''}"
 >
-	<div class="container px-2 md:px-4 flex justify-between items-center py-6">
+	<div class="container px-4 flex justify-between items-center py-6">
 		<a href="/" class="relative z-50">
 			<Svg image={logo} loading={'eager'} />
 		</a>

@@ -18,7 +18,7 @@
 </script>
 
 <footer class="grid gap-8 pb-2 text-secondary">
-	<div class="container px-2 md:px-4">
+	<div class="container px-4">
 		<div class="flex justify-between">
 			<a href="/">
 				<Svg image={logo} loading={'eager'} />
@@ -34,7 +34,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="container px-2 md:px-4 grid lg:grid-cols-12 gap-5">
+	<div class="container px-4 grid lg:grid-cols-12 gap-5">
 		<div class="col-start-1 col-end-2 lg:col-start-7 lg:col-end-13 grid grid-cols-3 gap-5">
 			<div>
 				<h3 class="text-md">Over ons</h3>
@@ -127,9 +127,7 @@
 			</ul>
 		</div>
 	</div>
-	<div
-		class="container px-2 md:px-4 flex flex-col md:flex-row md:justify-between gap-4 text-sm text-gray"
-	>
+	<div class="container px-4 flex flex-col md:flex-row md:justify-between gap-4 text-sm text-gray">
 		{#if secondaryMenu}
 			<ul class="flex gap-5">
 				{#each secondaryMenu as item}

@@ -12,7 +12,7 @@
 </script>
 
 <section class="extra-spacing pb-xs">
-	<div class="grid gap-12 container px-2 md:px-4 text-center text-3xl max-w-[22ch]">
+	<div class="grid gap-12 container px-4 text-center text-3xl max-w-[22ch]">
 		{#if title}
 			<h2>{title}</h2>
 		{/if}

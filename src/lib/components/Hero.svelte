@@ -11,13 +11,13 @@
 			<Image {image} maxWidth={2560} maxHeight={1440} styling="w-full h-full object-cover" />
 		</div>
 	{/if}
-	<div class="col-start-1 row-start-1 container px-2 md:px-4 grid grid-cols-12 gap-5 pt-lg pb-md">
+	<div class="col-start-1 row-start-1 container px-4 grid grid-cols-12 gap-5 pt-lg pb-md">
 		<div class="col-span-full self-end">
 			{#if title}
 				<h1 class="max-w-[14ch]">{title}</h1>
 			{/if}
 			{#if lead}
-				<p class="text-md mt-4 max-w-[40ch]">{lead}</p>
+				<p class="text-md mt-4 max-w-[28ch] lg:max-w-[40ch]">{lead}</p>
 			{/if}
 			{#if cta}
 				<ul class="flex gap-5 mt-8">

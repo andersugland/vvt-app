@@ -5,10 +5,10 @@
 	$: ({ title, image, sertificates } = data);
 </script>
 
-<section class="extra-lg-spacing radial-gradient-secondary text-white pb-sm">
-	<div class="container px-2 md:px-4 grid grid-cols-3 lg:grid-cols-12 gap-x-5 gap-y-12 md:gap-y-24">
+<section class="extra-lg-spacing radial-gradient-secondary text-white pb-md xl:pb-md">
+	<div class="container px-4 grid grid-cols-3 lg:grid-cols-12 gap-x-5 gap-y-12 md:gap-y-24">
 		{#if image}
-			<div class="col-start-2 col-end-4 lg:col-start-8 lg:col-end-13 2xl:col-end-12 pr-12">
+			<div class="col-start-2 col-end-4 lg:col-start-8 lg:col-end-13 2xl:col-end-12 pr-12 xl:pb-xs">
 				<div
 					class="relative w-full h-full min-h-[450px] max-h-[550px] md:min-h-[550px] xl:min-h-[700px] xl:max-h-[700px] -mt-24 before:block before:w-full before:h-full before:border-[3px] before:border-white before:absolute before:rounded-t-full before:top-8 before:left-8 lg:before:top-12 lg:before:left-12"
 				>
@@ -21,14 +21,14 @@
 				</div>
 			</div>
 		{/if}
-		<div class="col-start-1 col-end-3 lg:row-start-1 lg:col-end-6 lg:pt-md lg:pb-sm">
+		<div class="col-start-1 col-end-3 lg:row-start-1 lg:col-end-6 lg:pt-md lg:pb-">
 			{#if title}
 				<div class="">
 					<h2 class="max-w-[20ch]">{title}</h2>
 				</div>
 			{/if}
 			{#if sertificates}
-				<ul class="grid grid-cols-2 md:grid-cols-3 mt-12 gap-10">
+				<ul class="grid grid-cols-3 md:grid-cols-3 mt-12 gap-10">
 					{#each sertificates as sertificate}
 						<li>
 							<Svg image={sertificate?.logo} loading={'eager'} styling="w-28 h-28" />

@@ -12,7 +12,7 @@
 
 <section class="{variants[variant]} min-h-[450px] md:min-h-[750px] grid place-items-center">
 	{#if variant === 'primary' || variant === 'secondary'}
-		<div class="container px-2 md:px-4 py-sm">
+		<div class="container px-4 py-sm">
 			<div class="grid grid-cols-12 gap-y-20 lg:gap-y-0">
 				<div
 					class="col-start-2 col-end-12 md:col-start-1 lg:col-end-5 xl:col-end-6 relative z-0 grid gap-5 max-w-[750px] lg:mt-0"

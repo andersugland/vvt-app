@@ -12,7 +12,7 @@
 	};
 </script>
 
-<section class="container px-2 md:px-4 xl:py-xs">
+<section class="container px-4 xl:py-xs">
 	{#if cards || showSertificates}
 		<ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 			{#each cards as item}

@@ -6,7 +6,7 @@
 
 <section class="extra-spacing grid grid-cols-12 pb-xs">
 	<div
-		class="col-span-full md:col-start-2 md:col-end-12 grid container px-2 md:px-4 text-center text-3xl max-w-[22ch]"
+		class="col-span-full md:col-start-2 md:col-end-12 grid container px-4 text-center text-3xl max-w-[22ch]"
 	>
 		{#if quote}
 			<div class="-scale-x-100 justify-self-start ml-4 md:ml-0">

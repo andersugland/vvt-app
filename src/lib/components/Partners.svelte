@@ -4,7 +4,7 @@
 	$: ({ title, partners } = data);
 </script>
 
-<section class="container px-2 md:px-4">
+<section class="container px-4">
 	{#if title}
 		<div class="grid w-full justify-end">
 			<h2 class="max-w-[20ch] md:text-right">{title}</h2>
