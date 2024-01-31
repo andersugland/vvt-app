@@ -13,9 +13,11 @@
 </script>
 
 <section class="{variants[variant]} extra-spacing">
-	<div class="container px-4 grid lg:grid-cols-12 gap-5">
+	<div class="relative container px-4 grid lg:grid-cols-12 gap-5">
 		{#if images}
-			<div class="lg:col-start-7 lg:col-end-13 grid grid-cols-6 gap-5 -mt-8 lg:-mt-12">
+			<div
+				class="lg:col-start-7 lg:col-end-13 grid grid-cols-6 gap-5 -mt-8 lg:-mt-12 absolutez w-fullz h-fullz"
+			>
 				{#if data.images.portraitOne}
 					<div class="relative col-start-2 col-span-2 row-start-1 row-span-3 aspect-[9/14]">
 						<div
@@ -33,7 +35,7 @@
 					</div>
 				{/if}
 				{#if data.images.portraitTwo}
-					<div class="relative col-start-4 col-span-2 row-start-2 row-span-3 w-fullaspect-[9/14]">
+					<div class="relative col-start-4 col-span-2 row-start-2 row-span-3 w-full aspect-[9/14]">
 						<div
 							class="absolute ml-8 w-full h-full rounded-lg border-[3px] {variant === 'transparent'
 								? 'border-primary'

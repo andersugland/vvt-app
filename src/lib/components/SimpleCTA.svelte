@@ -11,8 +11,8 @@
 	};
 </script>
 
-<section class="extra-spacing pb-xs">
-	<div class="grid gap-12 container px-4 text-center text-3xl max-w-[22ch]">
+<section class="extra-spacing container px-4 pb-xs">
+	<div class="grid gap-12 text-center text-3xl max-w-[22ch] mx-auto">
 		{#if title}
 			<h2>{title}</h2>
 		{/if}
