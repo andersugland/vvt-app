@@ -1,5 +1,4 @@
 <script>
-	import Button from '$lib/components/Button.svelte';
 	import BlockContent from '$lib/components/BlockContent.svelte';
 	export let data;
 	$: ({ content } = data);

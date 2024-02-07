@@ -132,6 +132,16 @@ export async function getContactInformation() {
 	);
 }
 
+export async function getBlog() {
+	return await client.fetch(
+		groq`*[_type == "blog"]{
+			title,
+			body,
+			image,
+		}`
+	);
+}
+
 export async function getFrontPage() {
 	return await client.fetch(
 		groq`*[_type == 'frontPage'][0] {
@@ -318,6 +328,13 @@ export async function getFrontPage() {
 						text,
 					}
 				},
+				_type == 'blogBlock' => {
+					blogReference -> {
+						title,
+						body,
+						image,
+					}
+				}
 			}
 		}`
 	);
@@ -542,6 +559,13 @@ export async function getPage(slug) {
 							text,
 						}
 					},
+					_type == 'blogBlock' => {
+						blogReference -> {
+							title,
+							body,
+							image,
+						}
+					}
 				}
 			}
 		}`,

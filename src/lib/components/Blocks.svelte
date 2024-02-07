@@ -6,10 +6,11 @@
 	import Cta from '$lib/components/CTA.svelte';
 	import Content from '$lib/components/Content.svelte';
 	import CardGrid from '$lib/components/CardGrid.svelte';
-	import SimpleCta from './SimpleCTA.svelte';
-	import Quote from './Quote.svelte';
-	import USPsBlock from './USPsBlock.svelte';
-	import Testimonial from './Testimonial.svelte';
+	import SimpleCta from '$lib/components/SimpleCTA.svelte';
+	import Quote from '$lib/components/Quote.svelte';
+	import USPsBlock from '$lib/components/USPsBlock.svelte';
+	import Testimonial from '$lib/components/Testimonial.svelte';
+	import Blog from '$lib/components/Blog.svelte';
 
 	export let blocks;
 </script>
@@ -49,6 +50,9 @@
 			{/if}
 			{#if block['_type'] == 'testimonial'}
 				<Testimonial data={block} />
+			{/if}
+			{#if block['_type'] == 'blogBlock'}
+				<Blog data={block} />
 			{/if}
 		{/key}
 	{/each}
