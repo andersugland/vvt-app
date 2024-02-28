@@ -41,8 +41,7 @@
 				<ul class="max-w-[18ch]">
 					{#each aboutUs as item}
 						<li>
-							<a href={`#`}>
-								<!-- <a href={`${routes[item['_type']]}/${item?.slug?.current}`}> -->
+							<a href={`${routes[item['_type']]}/${item?.slug?.current}`}>
 								{item?.title}
 							</a>
 						</li>
@@ -54,8 +53,7 @@
 				<ul class="max-w-[18ch]">
 					{#each services as item}
 						<li>
-							<a href={`#`}>
-								<!-- <a href={`${routes[item['_type']]}/${item?.slug?.current}`}> -->
+							<a href={`${routes[item['_type']]}/${item?.slug?.current}`}>
 								{item?.title}
 							</a>
 						</li>
@@ -67,8 +65,7 @@
 				<ul class="max-w-[18ch]">
 					{#each places as item}
 						<li>
-							<a href={`#`}>
-								<!-- <a href={`${routes[item['_type']]}/${item?.slug?.current}`}> -->
+							<a href={`${routes[item['_type']]}/${item?.slug?.current}`}>
 								{item?.title}
 							</a>
 						</li>

@@ -17,8 +17,7 @@
 		<ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 			{#each cards as item}
 				<li class="group w-full h-full rounded-lg">
-					<a href={'#'} class="grid">
-						<!-- <a href={`${routes[item['_type']]}/${item?.slug?.current}`} class="grid"> -->
+					<a href={`${routes[item['_type']]}/${item?.slug?.current}`} class="grid">
 						<div
 							class="relative z-0 row-start-1 row-end-1 col-start-1 col-end-1 before:block before:w-full before:h-full before:absolute before:top-0 before:left-0 before:bg-black before:rounded-lg before:opacity-30 after:block after:w-full after:h-full after:absolute after:top-0 after:left-0 after:backdrop-blur-[3px] after:transition-all after:duration-100 after:ease-in-out after:rounded-lg group-hover:after:backdrop-blur-0"
 						>
