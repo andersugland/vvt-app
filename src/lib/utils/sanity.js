@@ -334,6 +334,9 @@ export async function getFrontPage() {
 						body,
 						image,
 					}
+				},
+				_type == 'contactForm' => {
+					title,
 				}
 			}
 		}`
@@ -565,6 +568,9 @@ export async function getPage(slug) {
 							body,
 							image,
 						}
+					},
+					_type == 'contactForm' => {
+						title,
 					}
 				}
 			}

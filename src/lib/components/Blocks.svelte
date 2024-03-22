@@ -11,6 +11,7 @@
 	import USPsBlock from '$lib/components/USPsBlock.svelte';
 	import Testimonial from '$lib/components/Testimonial.svelte';
 	import Blog from '$lib/components/Blog.svelte';
+	import ContactForm from '$lib/components/ContactForm.svelte';
 
 	export let blocks;
 </script>
@@ -53,6 +54,9 @@
 			{/if}
 			{#if block['_type'] == 'blogBlock'}
 				<Blog data={block} />
+			{/if}
+			{#if block['_type'] == 'contactForm'}
+				<ContactForm data={block} />
 			{/if}
 		{/key}
 	{/each}

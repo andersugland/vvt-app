@@ -41,7 +41,10 @@
 				<ul class="max-w-[18ch]">
 					{#each aboutUs as item}
 						<li>
-							<a href={`${routes[item['_type']]}/${item?.slug?.current}`}>
+							<a
+								href={`${routes[item['_type']]}/${item?.slug?.current}`}
+								class="hover:text-primary"
+							>
 								{item?.title}
 							</a>
 						</li>
@@ -53,7 +56,10 @@
 				<ul class="max-w-[18ch]">
 					{#each services as item}
 						<li>
-							<a href={`${routes[item['_type']]}/${item?.slug?.current}`}>
+							<a
+								href={`${routes[item['_type']]}/${item?.slug?.current}`}
+								class="hover:text-primary"
+							>
 								{item?.title}
 							</a>
 						</li>
@@ -65,7 +71,10 @@
 				<ul class="max-w-[18ch]">
 					{#each places as item}
 						<li>
-							<a href={`${routes[item['_type']]}/${item?.slug?.current}`}>
+							<a
+								href={`${routes[item['_type']]}/${item?.slug?.current}`}
+								class="hover:text-primary"
+							>
 								{item?.title}
 							</a>
 						</li>
@@ -129,7 +138,7 @@
 			<ul class="flex gap-5">
 				{#each secondaryMenu as item}
 					<li>
-						<a href={item?.link?.url}>{item?.title}</a>
+						<a href={item?.link?.url} class="hover:text-dark">{item?.title}</a>
 					</li>
 				{/each}
 			</ul>
