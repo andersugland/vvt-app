@@ -10,8 +10,6 @@
     font-variation-settings: "wght" 300;
 	
 		@apply text-dark text-body selection:bg-primary selection:text-white;
-
-		/* test */
 	
 	}
 
